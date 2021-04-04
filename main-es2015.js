@@ -1184,9 +1184,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 let DataService = class DataService {
+    //68.65.123.130
     constructor(http) {
         this.http = http;
-        this.uri = 'http://68.65.123.130:3001';
+        //uri='http://localhost:3001';
+        this.uri = 'https://csspreparation.academy/openlair/';
     }
     getdata() {
         return this.http.get(`${this.uri}/display/data`);
