@@ -34,12 +34,12 @@
             position: 'right'
           },
           {
-            element: '.highlightIndicators .step4',
+            element: document.querySelector('.highlightIndicators .step4'),
             intro: 'Step 4: Here you can select (x) the Indicators you want.',
             position: 'bottom'
           },
           {
-            element: '.highlightIndicators .stepViewMetrics',
+            element: document.querySelector('.highlightIndicators .stepViewMetrics'),
             intro: 'Step 5: If you want to see the Metrics/Measurements CLICK on the Indicator.',
             position: 'right'
           },
