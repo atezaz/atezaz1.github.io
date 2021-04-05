@@ -84,7 +84,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n<div class=\"header\">\n    <mat-toolbar color='primary'><span class=\"step0\" >Open Learning Analytics Indicator Repository </span> \n        <span class=\"example-spacer\"></span> \n        \n    \n   <!-- <a href=\"#\" onclick=\"myTour()\">Start Tour</a> --> \n    <a mat-button class=\"stepReferences\"  (click)='referances()'target=\"_blank\">Referances</a>\n    <button class=\"mat-button mat-button-base stepStartTour\" id=\"myTourBtn\">Start Tour<img width=\"15px\" src=\"assets/images/tour.png\"></button>\n</mat-toolbar>\n</div>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("\n<div class=\"header\">\n    <mat-toolbar color='primary'><span class=\"step0\">  <a  href=\"https://atezaz.github.io/\"><img style=\"height: 58px;  padding-top: 8px;\" src=\"assets/images/logo.png\"></a></span> \n        <span class=\"example-spacer\"></span> \n        \n    \n   <!-- <a href=\"#\" onclick=\"myTour()\">Start Tour</a> --> \n    <a mat-button class=\"stepReferences\"  (click)='referances()'target=\"_blank\">Referances</a>\n    <button class=\"mat-button mat-button-base stepStartTour\" id=\"myTourBtn\">Start Tour<img width=\"15px\" src=\"assets/images/tour.png\"></button>\n</mat-toolbar>\n</div>\n");
 
 /***/ }),
 
@@ -1187,7 +1187,7 @@ let DataService = class DataService {
     //68.65.123.130
     constructor(http) {
         this.http = http;
-        // uri='http://localhost:3001';
+        //uri='http://localhost:3001';
         this.uri = 'https://csspreparation.academy/openlair';
     }
     getdata() {
