@@ -1187,7 +1187,7 @@ let DataService = class DataService {
     //68.65.123.130
     constructor(http) {
         this.http = http;
-        //uri='http://localhost:3001';
+        // uri='http://localhost:3001';
         this.uri = 'https://csspreparation.academy/openlair';
     }
     getdata() {

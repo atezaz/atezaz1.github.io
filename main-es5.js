@@ -2127,7 +2127,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       function DataService(http) {
         _classCallCheck(this, DataService);
 
-        this.http = http; //uri='http://localhost:3001';
+        this.http = http; // uri='http://localhost:3001';
 
         this.uri = 'https://csspreparation.academy/openlair';
       }
