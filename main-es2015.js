@@ -58,7 +58,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<span class=\"OpenLAIR_Home\">  <!-- Not run the demo if it is not home page --> \n<div>\n  <span style=\"padding-bottom: 2px;\">\n      <strong>Learning Events/Objectives</strong><br>\n        <span style=\"font-size: 14px;\" id=\"tooltipEvents\" data-tooltipster='{\"side\":\"bottom\",\"animation\":\"fall\", \"delay\":\"200\", \"theme\":\"tooltipster-shadow\"}' title=\"\">\n          <img width=\"16px\" src=\"assets/images/question.png\"> Click here for more details\n            <span class=\"toolBoxCss\" id=\"contentEvents\">\n              <p style=\"text-align:left;\">\n                <strong>Learning Events or Objectives</strong><br/>\n                A learning objective is the desired outcome of a single or multiple learning event and <br>\n              is used to establish learning activities to achieve the overall learning outcome <a target=\"_blank\" href=\"https://research.tue.nl/en/publications/teacher-learning-in-the-context-of-educational-innovation-learnin\">[12]</a>. <br>Learning design literature identified \n              eight learning events: create, explore, practice, <br>imitate, receive, debate, meta-learn, and experiment.\n              </p>\n        </span>\n      </span>\n</span>\n<br>\n  <mat-form-field >\n    <mat-select class=\"step1\"\n      placeholder=\"Learning Events/Objectives\"\n      name=\"Select\"\n      [(ngModel)]=\"selected\"\n      multiple\n      #selectionModel=\"ngModel\"\n      (valueChange)=\"learningValueChange($event)\">\n      <app-select-check-all\n        [model]=\"selectionModel\"\n        [values]=\"options\"\n        (sendCount)=\"learningValueChange($event)\">\n      </app-select-check-all>\n      <mat-option *ngFor=\"let option of options\" [value]=\"option\">\n        {{ option }}\n      </mat-option>\n    </mat-select>\n  </mat-form-field>\n</div>\n<div>\n  <strong>learning Activites</strong><br>\n    <span style=\"font-size: 14px;\" id=\"tooltipActivites\" data-tooltipster='{\"side\":\"bottom\",\"animation\":\"fall\", \"delay\":\"200\", \"theme\":\"tooltipster-shadow\"}' title=\"\">\n      <img width=\"16px\" src=\"assets/images/question.png\"> Click here for more details\n         <span class=\"toolBoxCss\" id=\"contentActivites\">\n          <p style=\"text-align:left;\">\n            <strong>Learning Activites</strong><br />\n          A study by Gruber et al. <a target=\"_blank\" href=\"https://www.researchgate.net/publication/334170760_Design_Thinking_for_Technology_Enhanced_Learning\">[3]</a> took the model of learning events and added learning activities<br>\n          to identify its outcomes in LD. Learning activities are split into in-class methods and tools,<br>\n          and online methods and tools [<a target=\"_blank\" href=\"https://www.researchgate.net/publication/334170760_Design_Thinking_for_Technology_Enhanced_Learning\">3</a>, <a target=\"_blank\" href=\"https://www.researchgate.net/publication/222945649_Factors_affecting_teachers'_participation_in_professional_learning_activities\">9</a>]. Examples of in-class methods and tools are exercise, <br>exam,\n          presentation, discussion, demonstration, etc. On the other hand, online methods and <br>tools are \n          blogs, wikis, forums, photo and audio notes, online tests and quizzes, e-portfolios, <br>etc.\n          </p>\n        </span>\n  </span>\n  <br /><br />\n  <ng-multiselect-dropdown\n    class=\"dropdown-menu step2\"\n    [placeholder]=\"'Learning Activities'\"\n    [data]=\"dropdownList\"\n    [(ngModel)]=\"selectedItems\"\n    [settings]=\"dropdownSettings\"\n    (onSelect)=\"onItemSelect($event)\"\n    (onSelectAll)=\"onSelectAll($event)\"\n    (onDeSelect)=\"checkvalue($event)\">\n  </ng-multiselect-dropdown>\n</div>\n<div>\n  <strong>Indicators</strong><br>\n    <span style=\"font-size: 14px;\" id=\"tooltipIndicators\" data-tooltipster='{\"side\":\"bottom\",\"animation\":\"fall\", \"delay\":\"200\", \"theme\":\"tooltipster-shadow\"}' title=\"\">\n      <img width=\"16px\" src=\"assets/images/question.png\"> Click here for more details\n         <span class=\"toolBoxCss\" id=\"contentIndicators\">\n          <p style=\"text-align:left;\">\n            <strong>Indicators</strong><br />\n            Metrics are used to create indicators; an indicator is the result of the analysis of one<br>\n            or multiple metrics and gives a more comprehensive picture on a particular (abstract) <br>\n            learner status, e.g. reading comprehension, self-reflection, etc. An indicator covers a <br>\n            particular aspect of an abstract variable (e.g., student attention) by using relevant <br>\n            (measurable) items.\n          </p>\n        </span>\n  </span>\n  <br /><br />\n  <input \n  class=\"step3\" \n    matInput\n    [(ngModel)]=\"searchInd\"\n    placeholder=\"Search Indicator\"\n    (change)=\"searchIndicator(searchInd)\"\n  />\n</div >\n<div>\n  <strong>Metrics</strong><br>\n  <span style=\"font-size: 14px;\" id=\"tooltipMetrics\" data-tooltipster='{\"side\":\"bottom\",\"animation\":\"fall\", \"delay\":\"200\", \"theme\":\"tooltipster-shadow\"}' title=\"\">\n    <img width=\"16px\" src=\"assets/images/question.png\"> Click here for more details\n       <span class=\"toolBoxCss\" id=\"contentMetrics\">\n        <p style=\"text-align:left;\">\n          <strong>Metrics</strong><br/>\n         Learning analytics applications collect data from the interaction between learners and LMSs.<br>\n         To make sense of these captured data, they need to be categorized in a corresponding unit of<br>\n         measurement (e.g. number of views, login/logout frequency & time, number of posts, etc.). In<br>\n         this paper, we refer to the units of measurements as metrics.\n        </p>\n      </span>\n</span>\n<br /><br />\n  <input class=\"stepMetrics\"\n    matInput    [(ngModel)]=\"searchText\"\n    placeholder=\"Search Metrics\"\n    (change)=\"learningEventsChangeOnSearch(searchMet)\"\n  />\n</div>\n\n\n<div style=\"margin-left:50px\" >\n<label style=\"color: gray; font-size: 15px;\"> Seleted Indicator(s)</label>\n  <ul id=\"reset\"style=\"line-height: 15%; font-size: 15px;\" *ngFor=\"let selectInd of ind_list\">\n    <li>\n      {{selectInd}}     \n     \n     </li>\n     \n </ul>\n <span style=\"padding-top: 16px;  padding-bottom: 16px;\" >\n <button class=\"stepDownload\" mat-raised-button color=\"primary\" (click)=\"getSelectedind(mat_list)\">Download</button>\n</span>\n <button mat-button (click)=\"reset()\">Reset</button>\n \n\n</div>\n\n\n\n<ng-template #secondDialog>\n  <h2 matDialogTitle>Metrics</h2>\n  <mat-dialog-content>\n    <ul  *ngFor=\"let mat of sp\">  <!-- style=\"line-height: 20%\" -->\n      <li>{{ mat }}</li>\n    </ul>\n  </mat-dialog-content>\n  <button mat-button mat-dialog-close>Close</button>\n</ng-template>\n\n\n<table style=\" margin-left: 10px;\">\n  <thead>\n    <th>Learning Events/Objectives</th>\n    <div>\n      <th style=\" margin-left: 40px;\">Learning Activities</th>\n    </div>\n    <div style=\" margin-left: 80px;\"><th>Indicators</th></div>\n  </thead>\n\n  <!-- for loop for learning events -->\n  <tr *ngFor=\"let learningEvents of data\">\n    <td style=\"width: 15; \"class=\"leraningevents\" >{{ learningEvents.LearningEvents }}</td>\n    <td >\n      <tr\n        class=\"activities\"\n        *ngFor=\"let LearningActivities of learningEvents.LearningActivities\"\n      >\n        <td style=\"width: 210px; \">\n          {{ LearningActivities.Name }}\n        </td>\n        <td class=\"highlightIndicators\">\n          <!-- loop for indicators -->\n          <tr  *ngFor=\"let indic of LearningActivities.indicator\" >\n            <input class=\"step4\" #indicatorCheckbox type=\"checkbox\" value=\"indic\" (change)=\"Checkbox($event,indic)\"/>\n            <a  class=\"sortable stepViewMetrics\" (click)=\"getMeterics(indic)\">\n              {{ indic.indicatorName }}\n            </a>\n\n            <td *ngIf=\"searchText\">\n              <tr>\n                <a class=\"sortable\">\n                  {{ indic.metrics }}\n                </a>\n              </tr>\n            </td>\n          </tr>\n        </td>\n      </tr>\n    </td>\n  </tr>\n</table> \n</span>");
+/* harmony default export */ __webpack_exports__["default"] = ("<span class=\"OpenLAIR_Home\">\n  <!-- Not run the demo if it is not home page -->\n  <div>\n    <span style=\"padding-bottom: 2px;\">\n      <strong>Learning Events/Objectives</strong><br>\n      <span style=\"font-size: 14px;\" id=\"tooltipEvents\"\n        data-tooltipster='{\"side\":\"bottom\",\"animation\":\"fall\", \"delay\":\"200\", \"theme\":\"tooltipster-shadow\"}' title=\"\">\n        <img width=\"16px\" src=\"assets/images/question.png\"> Click here for more details\n        <span class=\"toolBoxCss\" id=\"contentEvents\">\n          <p style=\"text-align:left;\">\n            <strong>Learning Events or Objectives</strong><br />\n            A learning objective is the desired outcome of a single or multiple learning event and <br>\n            is used to establish learning activities to achieve the overall learning outcome <a target=\"_blank\"\n              href=\"https://research.tue.nl/en/publications/teacher-learning-in-the-context-of-educational-innovation-learnin\">[12]</a>.\n            <br>Learning design literature identified\n            eight learning events: create, explore, practice, <br>imitate, receive, debate, meta-learn, and experiment.\n          </p>\n        </span>\n      </span>\n    </span>\n    <br>\n    <mat-form-field>\n      <mat-select class=\"step1\" placeholder=\"Learning Events/Objectives\" name=\"Select\" [(ngModel)]=\"selected\" multiple\n        #selectionModel=\"ngModel\" (valueChange)=\"learningValueChange($event)\">\n        <app-select-check-all [model]=\"selectionModel\" [values]=\"options\" (sendCount)=\"learningValueChange($event)\">\n        </app-select-check-all>\n        <mat-option *ngFor=\"let option of options\" [value]=\"option\">\n          {{ option }}\n        </mat-option>\n      </mat-select>\n    </mat-form-field>\n  </div>\n  <div>\n    <strong>learning Activites</strong><br>\n    <span style=\"font-size: 14px;\" id=\"tooltipActivites\"\n      data-tooltipster='{\"side\":\"bottom\",\"animation\":\"fall\", \"delay\":\"200\", \"theme\":\"tooltipster-shadow\"}' title=\"\">\n      <img width=\"16px\" src=\"assets/images/question.png\"> Click here for more details\n      <span class=\"toolBoxCss\" id=\"contentActivites\">\n        <p style=\"text-align:left;\">\n          <strong>Learning Activites</strong><br />\n          A study by Gruber et al. <a target=\"_blank\"\n            href=\"https://www.researchgate.net/publication/334170760_Design_Thinking_for_Technology_Enhanced_Learning\">[3]</a>\n          took the model of learning events and added learning activities<br>\n          to identify its outcomes in LD. Learning activities are split into in-class methods and tools,<br>\n          and online methods and tools [<a target=\"_blank\"\n            href=\"https://www.researchgate.net/publication/334170760_Design_Thinking_for_Technology_Enhanced_Learning\">3</a>,\n          <a target=\"_blank\"\n            href=\"https://www.researchgate.net/publication/222945649_Factors_affecting_teachers'_participation_in_professional_learning_activities\">9</a>].\n          Examples of in-class methods and tools are exercise, <br>exam,\n          presentation, discussion, demonstration, etc. On the other hand, online methods and <br>tools are\n          blogs, wikis, forums, photo and audio notes, online tests and quizzes, e-portfolios, <br>etc.\n        </p>\n      </span>\n    </span>\n    <br /><br />\n    <ng-multiselect-dropdown class=\"dropdown-menu step2\" [placeholder]=\"'Learning Activities'\" [data]=\"dropdownList\"\n      [(ngModel)]=\"selectedItems\" [settings]=\"dropdownSettings\" (onSelect)=\"onItemSelect($event)\"\n      (onSelectAll)=\"onSelectAll($event)\" (onDeSelect)=\"checkvalue($event)\">\n    </ng-multiselect-dropdown>\n  </div>\n  <div>\n    <strong>Indicators</strong><br>\n    <span style=\"font-size: 14px;\" id=\"tooltipIndicators\"\n      data-tooltipster='{\"side\":\"bottom\",\"animation\":\"fall\", \"delay\":\"200\", \"theme\":\"tooltipster-shadow\"}' title=\"\">\n      <img width=\"16px\" src=\"assets/images/question.png\"> Click here for more details\n      <span class=\"toolBoxCss\" id=\"contentIndicators\">\n        <p style=\"text-align:left;\">\n          <strong>Indicators</strong><br />\n          Metrics are used to create indicators; an indicator is the result of the analysis of one<br>\n          or multiple metrics and gives a more comprehensive picture on a particular (abstract) <br>\n          learner status, e.g. reading comprehension, self-reflection, etc. An indicator covers a <br>\n          particular aspect of an abstract variable (e.g., student attention) by using relevant <br>\n          (measurable) items.\n        </p>\n      </span>\n    </span>\n    <br /><br />\n    <input class=\"step3\" matInput [(ngModel)]=\"searchInd\" placeholder=\"Search Indicator\"\n      (change)=\"searchIndicator(searchInd)\" />\n  </div>\n  <div>\n    <strong>Metrics</strong><br>\n    <span style=\"font-size: 14px;\" id=\"tooltipMetrics\"\n      data-tooltipster='{\"side\":\"bottom\",\"animation\":\"fall\", \"delay\":\"200\", \"theme\":\"tooltipster-shadow\"}' title=\"\">\n      <img width=\"16px\" src=\"assets/images/question.png\"> Click here for more details\n      <span class=\"toolBoxCss\" id=\"contentMetrics\">\n        <p style=\"text-align:left;\">\n          <strong>Metrics</strong><br />\n          Learning analytics applications collect data from the interaction between learners and LMSs.<br>\n          To make sense of these captured data, they need to be categorized in a corresponding unit of<br>\n          measurement (e.g. number of views, login/logout frequency & time, number of posts, etc.). In<br>\n          this paper, we refer to the units of measurements as metrics.\n        </p>\n      </span>\n    </span>\n    <br /><br />\n    <input class=\"stepMetrics\" matInput [(ngModel)]=\"searchText\" placeholder=\"Search Metrics\"\n      (change)=\"learningEventsChangeOnSearch(searchText)\" />\n  </div>\n\n\n  <div style=\"margin-left:50px\">\n    <label style=\"color: gray; font-size: 15px;\"> Seleted Indicator(s)</label>\n    <ul id=\"reset\" style=\"line-height: 15%; font-size: 15px;\" *ngFor=\"let selectInd of ind_list\">\n      <li>\n        {{selectInd}}\n\n      </li>\n\n    </ul>\n    <span style=\"padding-top: 16px;  padding-bottom: 16px;\">\n      <button class=\"stepDownload\" mat-raised-button color=\"primary\"\n        (click)=\"getSelectedind(mat_list)\">Download</button>\n    </span>\n    <button mat-button (click)=\"reset()\">Reset</button>\n\n\n  </div>\n\n\n\n  <ng-template #secondDialog>\n    <h2 matDialogTitle>Metrics</h2>\n    <mat-dialog-content>\n      <ul *ngFor=\"let mat of sp\">\n        <!-- style=\"line-height: 20%\" -->\n        <li>{{ mat }}</li>\n      </ul>\n    </mat-dialog-content>\n    <button mat-button mat-dialog-close>Close</button>\n  </ng-template>\n\n\n  <table style=\" margin-left: 10px;\">\n    <thead>\n      <th>Learning Events/Objectives</th>\n      <div>\n        <th style=\" margin-left: 40px;\">Learning Activities</th>\n      </div>\n      <div style=\" margin-left: 80px;\">\n        <th>Indicators</th>\n      </div>\n    </thead>\n\n    <!-- for loop for learning events -->\n    <tr *ngFor=\"let learningEvents of data\">\n      <td style=\"width: 15; \" class=\"leraningevents\">{{ learningEvents.LearningEvents }}</td>\n      <td>\n    <tr class=\"activities\" *ngFor=\"let LearningActivities of learningEvents.LearningActivities\">\n      <td style=\"width: 210px; \">\n        {{ LearningActivities.Name }}\n      </td>\n      <td class=\"highlightIndicators\">\n        <!-- loop for indicators -->\n        <tr *ngFor=\"let indic of LearningActivities.indicator\" >\n          <input class=\"step4\" #indicatorCheckbox type=\"checkbox\" value=\"indic\" (change)=\"Checkbox($event,indic)\" />\n    \n          <a class=\"sortable stepViewMetrics\" (click)=\"getMeterics(indic)\">\n            <span [innerHTML]=\" indic.indicatorName  | sanitizeHtml : searchInd\">\n              {{ indic.indicatorName  }}\n            </span>\n           </a>\n      <td *ngIf=\"searchText\">\n    <tr>\n      <a class=\"sortable\">\n        <span [innerHTML]=\" indic.metrics  | sanitizeHtml : searchText\">\n          {{ indic.metrics }}\n        </span>\n      </a>\n    </tr>\n    </td>\n    </tr>\n    </td>\n    </tr>\n    </td>\n    </tr>\n  </table>\n</span>\n");
 
 /***/ }),
 
@@ -84,13 +84,13 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n<div class=\"header\">\n    <mat-toolbar color='primary'><span class=\"step0\">  <a  href=\"https://atezaz.github.io/\"><img style=\"height: 58px;  padding-top: 8px;\" src=\"assets/images/logo.png\"></a></span> \n        <span class=\"example-spacer\"></span> \n        \n    \n   <!-- <a href=\"#\" onclick=\"myTour()\">Start Tour</a> --> \n    <a mat-button class=\"stepReferences\"  (click)='referances()'target=\"_blank\">Referances</a>\n    <button class=\"mat-button mat-button-base stepStartTour\" id=\"myTourBtn\">Start Tour<img width=\"15px\" src=\"assets/images/tour.png\"></button>\n</mat-toolbar>\n</div>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("\n<div class=\"header\">\n    <mat-toolbar color='primary'><span class=\"step0\">  <a  href=\"https://atezaz.github.io/\"><img style=\"height: 58px;  padding-top: 8px;\" src=\"assets/images/logo.png\"></a></span> \n        <span class=\"example-spacer\"></span> \n        \n    \n   <!-- <a href=\"#\" onclick=\"myTour()\">Start Tour</a> --> \n    <a mat-button class=\"stepReferences\"  (click)='references()'target=\"_blank\">References</a>\n    <button class=\"mat-button mat-button-base stepStartTour\" id=\"myTourBtn\">Start Tour<img width=\"15px\" src=\"assets/images/tour.png\"></button>\n</mat-toolbar>\n</div>\n");
 
 /***/ }),
 
-/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/component/referance/referance.component.html":
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/component/reference/referance.component.html":
 /*!****************************************************************************************************!*\
-  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/component/referance/referance.component.html ***!
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/component/reference/referance.component.html ***!
   \****************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -105,7 +105,7 @@ __webpack_require__.r(__webpack_exports__);
 /*!*****************************************!*\
   !*** ./node_modules/tslib/tslib.es6.js ***!
   \*****************************************/
-/*! exports provided: __extends, __assign, __rest, __decorate, __param, __metadata, __awaiter, __generator, __exportStar, __values, __read, __spread, __spreadArrays, __await, __asyncGenerator, __asyncDelegator, __asyncValues, __makeTemplateObject, __importStar, __importDefault */
+/*! exports provided: __extends, __assign, __rest, __decorate, __param, __metadata, __awaiter, __generator, __createBinding, __exportStar, __values, __read, __spread, __spreadArrays, __await, __asyncGenerator, __asyncDelegator, __asyncValues, __makeTemplateObject, __importStar, __importDefault, __classPrivateFieldGet, __classPrivateFieldSet */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -118,6 +118,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__metadata", function() { return __metadata; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__awaiter", function() { return __awaiter; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__generator", function() { return __generator; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__createBinding", function() { return __createBinding; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__exportStar", function() { return __exportStar; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__values", function() { return __values; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__read", function() { return __read; });
@@ -130,19 +131,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__makeTemplateObject", function() { return __makeTemplateObject; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__importStar", function() { return __importStar; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__importDefault", function() { return __importDefault; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__classPrivateFieldGet", function() { return __classPrivateFieldGet; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__classPrivateFieldSet", function() { return __classPrivateFieldSet; });
 /*! *****************************************************************************
-Copyright (c) Microsoft Corporation. All rights reserved.
-Licensed under the Apache License, Version 2.0 (the "License"); you may not use
-this file except in compliance with the License. You may obtain a copy of the
-License at http://www.apache.org/licenses/LICENSE-2.0
+Copyright (c) Microsoft Corporation.
 
-THIS CODE IS PROVIDED ON AN *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION ANY IMPLIED
-WARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A PARTICULAR PURPOSE,
-MERCHANTABLITY OR NON-INFRINGEMENT.
+Permission to use, copy, modify, and/or distribute this software for any
+purpose with or without fee is hereby granted.
 
-See the Apache Version 2.0 License for specific language governing permissions
-and limitations under the License.
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
+REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
+AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
+INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
+LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
+OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+PERFORMANCE OF THIS SOFTWARE.
 ***************************************************************************** */
 /* global Reflect, Promise */
 
@@ -198,10 +201,11 @@ function __metadata(metadataKey, metadataValue) {
 }
 
 function __awaiter(thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
         function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
         function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 }
@@ -234,19 +238,25 @@ function __generator(thisArg, body) {
     }
 }
 
+function __createBinding(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}
+
 function __exportStar(m, exports) {
-    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+    for (var p in m) if (p !== "default" && !exports.hasOwnProperty(p)) exports[p] = m[p];
 }
 
 function __values(o) {
-    var m = typeof Symbol === "function" && o[Symbol.iterator], i = 0;
+    var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
     if (m) return m.call(o);
-    return {
+    if (o && typeof o.length === "number") return {
         next: function () {
             if (o && i >= o.length) o = void 0;
             return { value: o && o[i++], done: !o };
         }
     };
+    throw new TypeError(s ? "Object is not iterable." : "Symbol.iterator is not defined.");
 }
 
 function __read(o, n) {
@@ -327,6 +337,21 @@ function __importDefault(mod) {
     return (mod && mod.__esModule) ? mod : { default: mod };
 }
 
+function __classPrivateFieldGet(receiver, privateMap) {
+    if (!privateMap.has(receiver)) {
+        throw new TypeError("attempted to get private field on non-instance");
+    }
+    return privateMap.get(receiver);
+}
+
+function __classPrivateFieldSet(receiver, privateMap, value) {
+    if (!privateMap.has(receiver)) {
+        throw new TypeError("attempted to set private field on non-instance");
+    }
+    privateMap.set(receiver, value);
+    return value;
+}
+
 
 /***/ }),
 
@@ -369,7 +394,7 @@ AppRoutingModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (".multiselect-dropdown .dropdown-btn {\r\n    display: inline-block;\r\n    \r\n    width: 100%;\r\n    padding: 6px 12px;\r\n    margin-bottom: 0;\r\n    font-size: 12px;\r\n    font-weight: 400;\r\n    line-height: 1.1;\r\n    text-align: left;\r\n    vertical-align: middle;\r\n    cursor: pointer;\r\n    background-image: none;\r\n    border-radius: 0px;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXBwLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxxQkFBcUI7O0lBRXJCLFdBQVc7SUFDWCxpQkFBaUI7SUFDakIsZ0JBQWdCO0lBQ2hCLGVBQWU7SUFDZixnQkFBZ0I7SUFDaEIsZ0JBQWdCO0lBQ2hCLGdCQUFnQjtJQUNoQixzQkFBc0I7SUFDdEIsZUFBZTtJQUNmLHNCQUFzQjtJQUN0QixrQkFBa0I7QUFDdEIiLCJmaWxlIjoic3JjL2FwcC9hcHAuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5tdWx0aXNlbGVjdC1kcm9wZG93biAuZHJvcGRvd24tYnRuIHtcclxuICAgIGRpc3BsYXk6IGlubGluZS1ibG9jaztcclxuICAgIFxyXG4gICAgd2lkdGg6IDEwMCU7XHJcbiAgICBwYWRkaW5nOiA2cHggMTJweDtcclxuICAgIG1hcmdpbi1ib3R0b206IDA7XHJcbiAgICBmb250LXNpemU6IDEycHg7XHJcbiAgICBmb250LXdlaWdodDogNDAwO1xyXG4gICAgbGluZS1oZWlnaHQ6IDEuMTtcclxuICAgIHRleHQtYWxpZ246IGxlZnQ7XHJcbiAgICB2ZXJ0aWNhbC1hbGlnbjogbWlkZGxlO1xyXG4gICAgY3Vyc29yOiBwb2ludGVyO1xyXG4gICAgYmFja2dyb3VuZC1pbWFnZTogbm9uZTtcclxuICAgIGJvcmRlci1yYWRpdXM6IDBweDtcclxufSJdfQ== */");
+/* harmony default export */ __webpack_exports__["default"] = (".multiselect-dropdown .dropdown-btn {\n    display: inline-block;\n    \n    width: 100%;\n    padding: 6px 12px;\n    margin-bottom: 0;\n    font-size: 12px;\n    font-weight: 400;\n    line-height: 1.1;\n    text-align: left;\n    vertical-align: middle;\n    cursor: pointer;\n    background-image: none;\n    border-radius: 0px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXBwLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxxQkFBcUI7O0lBRXJCLFdBQVc7SUFDWCxpQkFBaUI7SUFDakIsZ0JBQWdCO0lBQ2hCLGVBQWU7SUFDZixnQkFBZ0I7SUFDaEIsZ0JBQWdCO0lBQ2hCLGdCQUFnQjtJQUNoQixzQkFBc0I7SUFDdEIsZUFBZTtJQUNmLHNCQUFzQjtJQUN0QixrQkFBa0I7QUFDdEIiLCJmaWxlIjoic3JjL2FwcC9hcHAuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5tdWx0aXNlbGVjdC1kcm9wZG93biAuZHJvcGRvd24tYnRuIHtcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gICAgXG4gICAgd2lkdGg6IDEwMCU7XG4gICAgcGFkZGluZzogNnB4IDEycHg7XG4gICAgbWFyZ2luLWJvdHRvbTogMDtcbiAgICBmb250LXNpemU6IDEycHg7XG4gICAgZm9udC13ZWlnaHQ6IDQwMDtcbiAgICBsaW5lLWhlaWdodDogMS4xO1xuICAgIHRleHQtYWxpZ246IGxlZnQ7XG4gICAgdmVydGljYWwtYWxpZ246IG1pZGRsZTtcbiAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgYmFja2dyb3VuZC1pbWFnZTogbm9uZTtcbiAgICBib3JkZXItcmFkaXVzOiAwcHg7XG59Il19 */");
 
 /***/ }),
 
@@ -433,7 +458,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _data_service__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./data.service */ "./src/app/data.service.ts");
 /* harmony import */ var _component_display_display_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./component/display/display.component */ "./src/app/component/display/display.component.ts");
 /* harmony import */ var _component_dropdown_dropdown_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./component/dropdown/dropdown.component */ "./src/app/component/dropdown/dropdown.component.ts");
-/* harmony import */ var _component_referance_referance_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./component/referance/referance.component */ "./src/app/component/referance/referance.component.ts");
+/* harmony import */ var _component_reference_referance_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./component/reference/referance.component */ "./src/app/component/reference/referance.component.ts");
 /* harmony import */ var _component_display_select_check_all_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./component/display/select-check-all.component */ "./src/app/component/display/select-check-all.component.ts");
 
 
@@ -458,7 +483,7 @@ __webpack_require__.r(__webpack_exports__);
 
 const routes = [
     { path: 'add/data', component: _component_add_data_add_data_component__WEBPACK_IMPORTED_MODULE_12__["AddDataComponent"] },
-    { path: 'referance', component: _component_referance_referance_component__WEBPACK_IMPORTED_MODULE_19__["ReferanceComponent"] },
+    { path: 'reference', component: _component_reference_referance_component__WEBPACK_IMPORTED_MODULE_19__["ReferanceComponent"] },
     { path: 'display/data', component: _component_display_display_component__WEBPACK_IMPORTED_MODULE_17__["DisplayComponent"] },
     { path: '', redirectTo: 'display/data', pathMatch: 'full' }
 ];
@@ -472,10 +497,10 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
             _component_add_data_add_data_component__WEBPACK_IMPORTED_MODULE_12__["AddDataComponent"],
             _component_header_header_component__WEBPACK_IMPORTED_MODULE_13__["HeaderComponent"],
             _component_display_display_component__WEBPACK_IMPORTED_MODULE_17__["DisplayComponent"],
-            _component_display_filter_pipe__WEBPACK_IMPORTED_MODULE_14__["FilterPipe"],
+            _component_display_filter_pipe__WEBPACK_IMPORTED_MODULE_14__["SanitizeHtmlPipe"],
             _component_dropdown_dropdown_component__WEBPACK_IMPORTED_MODULE_18__["DropdownComponent"],
             _component_display_select_check_all_component__WEBPACK_IMPORTED_MODULE_20__["SelectCheckAllComponent"],
-            _component_referance_referance_component__WEBPACK_IMPORTED_MODULE_19__["ReferanceComponent"],
+            _component_reference_referance_component__WEBPACK_IMPORTED_MODULE_19__["ReferanceComponent"],
         ],
         imports: [
             _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
@@ -605,7 +630,7 @@ AddDataComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\r\n\r\nthead{\r\n  \r\n  color: grey;\r\n  font-size: .85em;\r\n  letter-spacing: .1em;\r\n  text-transform: uppercase;\r\n}\r\n\r\n\r\n.activities:nth-child(odd) {\r\n  background-color: #f1f1f1;\r\n  \r\n}\r\n\r\n\r\n.leraningevents:nth-child(odd) {\r\n  background-color: #f1f1f1;\r\n \r\n}\r\n\r\n\r\n.sortable {\r\n  cursor: pointer;\r\n}\r\n\r\n\r\ndiv {\r\n  display:inline-block;\r\n  margin: 20px;\r\n  \r\n}\r\n\r\n\r\nbutton {\r\n  display:inline-block;\r\n  margin: 30px;\r\n  \r\n}\r\n\r\n\r\nng-multiselect-dropdown {\r\n  \r\n\r\n  font-size: 15px;\r\n  color: grey;\r\n \r\n  \r\n  \r\n}\r\n\r\n\r\n.mat-select {\r\n  display: inline-block;\r\n  border: 1px solid #adadad;\r\n  width: 100%;\r\n  padding: 6px 2px;\r\n  margin-bottom: 0;\r\n  font-size: 12px;\r\n  font-weight: 400;\r\n  line-height: 1.1;\r\n  text-align: center;\r\n  vertical-align: middle;\r\n  cursor: pointer;\r\n  background-image: none;\r\n  border-radius: 4px;\r\n  \r\n  \r\n}\r\n\r\n\r\n::ng-deep .mat-form-field-underline {\r\n  display: none;\r\n}\r\n\r\n\r\n.mat-form-field {\r\n  font-size: 13px;\r\n  padding: 6px 2px;\r\n  text-align: center;\r\n  line-height: 2;\r\n  font-family: Roboto, \"Helvetica Neue\", sans-serif;\r\n  color: grey;\r\n}\r\n\r\n\r\n.center {\r\n  margin-left: 10%;\r\n  margin-right: 10%;\r\n}\r\n\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50L2Rpc3BsYXkvZGlzcGxheS5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBRUE7O0VBRUUsV0FBVztFQUNYLGdCQUFnQjtFQUNoQixvQkFBb0I7RUFDcEIseUJBQXlCO0FBQzNCOzs7QUFHQTtFQUNFLHlCQUF5Qjs7QUFFM0I7OztBQUVBO0VBQ0UseUJBQXlCOztBQUUzQjs7O0FBRUE7RUFDRSxlQUFlO0FBQ2pCOzs7QUFFQTtFQUNFLG9CQUFvQjtFQUNwQixZQUFZOztBQUVkOzs7QUFFQTtFQUNFLG9CQUFvQjtFQUNwQixZQUFZOztBQUVkOzs7QUFHQTs7O0VBR0UsZUFBZTtFQUNmLFdBQVc7Ozs7QUFJYjs7O0FBRUE7RUFDRSxxQkFBcUI7RUFDckIseUJBQXlCO0VBQ3pCLFdBQVc7RUFDWCxnQkFBZ0I7RUFDaEIsZ0JBQWdCO0VBQ2hCLGVBQWU7RUFDZixnQkFBZ0I7RUFDaEIsZ0JBQWdCO0VBQ2hCLGtCQUFrQjtFQUNsQixzQkFBc0I7RUFDdEIsZUFBZTtFQUNmLHNCQUFzQjtFQUN0QixrQkFBa0I7OztBQUdwQjs7O0FBQ0E7RUFDRSxhQUFhO0FBQ2Y7OztBQUNBO0VBQ0UsZUFBZTtFQUNmLGdCQUFnQjtFQUNoQixrQkFBa0I7RUFDbEIsY0FBYztFQUNkLGlEQUFpRDtFQUNqRCxXQUFXO0FBQ2I7OztBQUNBO0VBQ0UsZ0JBQWdCO0VBQ2hCLGlCQUFpQjtBQUNuQiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudC9kaXNwbGF5L2Rpc3BsYXkuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIlxyXG5cclxudGhlYWR7XHJcbiAgXHJcbiAgY29sb3I6IGdyZXk7XHJcbiAgZm9udC1zaXplOiAuODVlbTtcclxuICBsZXR0ZXItc3BhY2luZzogLjFlbTtcclxuICB0ZXh0LXRyYW5zZm9ybTogdXBwZXJjYXNlO1xyXG59XHJcblxyXG5cclxuLmFjdGl2aXRpZXM6bnRoLWNoaWxkKG9kZCkge1xyXG4gIGJhY2tncm91bmQtY29sb3I6ICNmMWYxZjE7XHJcbiAgXHJcbn1cclxuXHJcbi5sZXJhbmluZ2V2ZW50czpudGgtY2hpbGQob2RkKSB7XHJcbiAgYmFja2dyb3VuZC1jb2xvcjogI2YxZjFmMTtcclxuIFxyXG59XHJcblxyXG4uc29ydGFibGUge1xyXG4gIGN1cnNvcjogcG9pbnRlcjtcclxufVxyXG5cclxuZGl2IHtcclxuICBkaXNwbGF5OmlubGluZS1ibG9jaztcclxuICBtYXJnaW46IDIwcHg7XHJcbiAgXHJcbn1cclxuXHJcbmJ1dHRvbiB7XHJcbiAgZGlzcGxheTppbmxpbmUtYmxvY2s7XHJcbiAgbWFyZ2luOiAzMHB4O1xyXG4gIFxyXG59XHJcblxyXG5cclxubmctbXVsdGlzZWxlY3QtZHJvcGRvd24ge1xyXG4gIFxyXG5cclxuICBmb250LXNpemU6IDE1cHg7XHJcbiAgY29sb3I6IGdyZXk7XHJcbiBcclxuICBcclxuICBcclxufVxyXG5cclxuLm1hdC1zZWxlY3Qge1xyXG4gIGRpc3BsYXk6IGlubGluZS1ibG9jaztcclxuICBib3JkZXI6IDFweCBzb2xpZCAjYWRhZGFkO1xyXG4gIHdpZHRoOiAxMDAlO1xyXG4gIHBhZGRpbmc6IDZweCAycHg7XHJcbiAgbWFyZ2luLWJvdHRvbTogMDtcclxuICBmb250LXNpemU6IDEycHg7XHJcbiAgZm9udC13ZWlnaHQ6IDQwMDtcclxuICBsaW5lLWhlaWdodDogMS4xO1xyXG4gIHRleHQtYWxpZ246IGNlbnRlcjtcclxuICB2ZXJ0aWNhbC1hbGlnbjogbWlkZGxlO1xyXG4gIGN1cnNvcjogcG9pbnRlcjtcclxuICBiYWNrZ3JvdW5kLWltYWdlOiBub25lO1xyXG4gIGJvcmRlci1yYWRpdXM6IDRweDtcclxuICBcclxuICBcclxufVxyXG46Om5nLWRlZXAgLm1hdC1mb3JtLWZpZWxkLXVuZGVybGluZSB7XHJcbiAgZGlzcGxheTogbm9uZTtcclxufVxyXG4ubWF0LWZvcm0tZmllbGQge1xyXG4gIGZvbnQtc2l6ZTogMTNweDtcclxuICBwYWRkaW5nOiA2cHggMnB4O1xyXG4gIHRleHQtYWxpZ246IGNlbnRlcjtcclxuICBsaW5lLWhlaWdodDogMjtcclxuICBmb250LWZhbWlseTogUm9ib3RvLCBcIkhlbHZldGljYSBOZXVlXCIsIHNhbnMtc2VyaWY7XHJcbiAgY29sb3I6IGdyZXk7XHJcbn1cclxuLmNlbnRlciB7XHJcbiAgbWFyZ2luLWxlZnQ6IDEwJTtcclxuICBtYXJnaW4tcmlnaHQ6IDEwJTtcclxufVxyXG5cclxuIl19 */");
+/* harmony default export */ __webpack_exports__["default"] = ("\n\nthead{\n  \n  color: grey;\n  font-size: .85em;\n  letter-spacing: .1em;\n  text-transform: uppercase;\n}\n\n\n.activities:nth-child(odd) {\n  background-color: #f1f1f1;\n  \n}\n\n\n.leraningevents:nth-child(odd) {\n  background-color: #f1f1f1;\n \n}\n\n\n.sortable {\n  cursor: pointer;\n}\n\n\ndiv {\n  display:inline-block;\n  margin: 20px;\n  \n}\n\n\nbutton {\n  display:inline-block;\n  margin: 30px;\n  \n}\n\n\nng-multiselect-dropdown {\n  \n\n  font-size: 15px;\n  color: grey;\n \n  \n  \n}\n\n\n.mat-select {\n  display: inline-block;\n  border: 1px solid #adadad;\n  width: 100%;\n  padding: 6px 2px;\n  margin-bottom: 0;\n  font-size: 12px;\n  font-weight: 400;\n  line-height: 1.1;\n  text-align: center;\n  vertical-align: middle;\n  cursor: pointer;\n  background-image: none;\n  border-radius: 4px;\n  \n  \n}\n\n\n::ng-deep .mat-form-field-underline {\n  display: none;\n}\n\n\n.mat-form-field {\n  font-size: 13px;\n  padding: 6px 2px;\n  text-align: center;\n  line-height: 2;\n  font-family: Roboto, \"Helvetica Neue\", sans-serif;\n  color: grey;\n}\n\n\n.center {\n  margin-left: 10%;\n  margin-right: 10%;\n}\n\n\n.highlightText {\n  background: yellow;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50L2Rpc3BsYXkvZGlzcGxheS5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBRUE7O0VBRUUsV0FBVztFQUNYLGdCQUFnQjtFQUNoQixvQkFBb0I7RUFDcEIseUJBQXlCO0FBQzNCOzs7QUFHQTtFQUNFLHlCQUF5Qjs7QUFFM0I7OztBQUVBO0VBQ0UseUJBQXlCOztBQUUzQjs7O0FBRUE7RUFDRSxlQUFlO0FBQ2pCOzs7QUFFQTtFQUNFLG9CQUFvQjtFQUNwQixZQUFZOztBQUVkOzs7QUFFQTtFQUNFLG9CQUFvQjtFQUNwQixZQUFZOztBQUVkOzs7QUFHQTs7O0VBR0UsZUFBZTtFQUNmLFdBQVc7Ozs7QUFJYjs7O0FBRUE7RUFDRSxxQkFBcUI7RUFDckIseUJBQXlCO0VBQ3pCLFdBQVc7RUFDWCxnQkFBZ0I7RUFDaEIsZ0JBQWdCO0VBQ2hCLGVBQWU7RUFDZixnQkFBZ0I7RUFDaEIsZ0JBQWdCO0VBQ2hCLGtCQUFrQjtFQUNsQixzQkFBc0I7RUFDdEIsZUFBZTtFQUNmLHNCQUFzQjtFQUN0QixrQkFBa0I7OztBQUdwQjs7O0FBQ0E7RUFDRSxhQUFhO0FBQ2Y7OztBQUNBO0VBQ0UsZUFBZTtFQUNmLGdCQUFnQjtFQUNoQixrQkFBa0I7RUFDbEIsY0FBYztFQUNkLGlEQUFpRDtFQUNqRCxXQUFXO0FBQ2I7OztBQUNBO0VBQ0UsZ0JBQWdCO0VBQ2hCLGlCQUFpQjtBQUNuQjs7O0FBRUE7RUFDRSxrQkFBa0I7QUFDcEIiLCJmaWxlIjoic3JjL2FwcC9jb21wb25lbnQvZGlzcGxheS9kaXNwbGF5LmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyJcblxudGhlYWR7XG4gIFxuICBjb2xvcjogZ3JleTtcbiAgZm9udC1zaXplOiAuODVlbTtcbiAgbGV0dGVyLXNwYWNpbmc6IC4xZW07XG4gIHRleHQtdHJhbnNmb3JtOiB1cHBlcmNhc2U7XG59XG5cblxuLmFjdGl2aXRpZXM6bnRoLWNoaWxkKG9kZCkge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjZjFmMWYxO1xuICBcbn1cblxuLmxlcmFuaW5nZXZlbnRzOm50aC1jaGlsZChvZGQpIHtcbiAgYmFja2dyb3VuZC1jb2xvcjogI2YxZjFmMTtcbiBcbn1cblxuLnNvcnRhYmxlIHtcbiAgY3Vyc29yOiBwb2ludGVyO1xufVxuXG5kaXYge1xuICBkaXNwbGF5OmlubGluZS1ibG9jaztcbiAgbWFyZ2luOiAyMHB4O1xuICBcbn1cblxuYnV0dG9uIHtcbiAgZGlzcGxheTppbmxpbmUtYmxvY2s7XG4gIG1hcmdpbjogMzBweDtcbiAgXG59XG5cblxubmctbXVsdGlzZWxlY3QtZHJvcGRvd24ge1xuICBcblxuICBmb250LXNpemU6IDE1cHg7XG4gIGNvbG9yOiBncmV5O1xuIFxuICBcbiAgXG59XG5cbi5tYXQtc2VsZWN0IHtcbiAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xuICBib3JkZXI6IDFweCBzb2xpZCAjYWRhZGFkO1xuICB3aWR0aDogMTAwJTtcbiAgcGFkZGluZzogNnB4IDJweDtcbiAgbWFyZ2luLWJvdHRvbTogMDtcbiAgZm9udC1zaXplOiAxMnB4O1xuICBmb250LXdlaWdodDogNDAwO1xuICBsaW5lLWhlaWdodDogMS4xO1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gIHZlcnRpY2FsLWFsaWduOiBtaWRkbGU7XG4gIGN1cnNvcjogcG9pbnRlcjtcbiAgYmFja2dyb3VuZC1pbWFnZTogbm9uZTtcbiAgYm9yZGVyLXJhZGl1czogNHB4O1xuICBcbiAgXG59XG46Om5nLWRlZXAgLm1hdC1mb3JtLWZpZWxkLXVuZGVybGluZSB7XG4gIGRpc3BsYXk6IG5vbmU7XG59XG4ubWF0LWZvcm0tZmllbGQge1xuICBmb250LXNpemU6IDEzcHg7XG4gIHBhZGRpbmc6IDZweCAycHg7XG4gIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgbGluZS1oZWlnaHQ6IDI7XG4gIGZvbnQtZmFtaWx5OiBSb2JvdG8sIFwiSGVsdmV0aWNhIE5ldWVcIiwgc2Fucy1zZXJpZjtcbiAgY29sb3I6IGdyZXk7XG59XG4uY2VudGVyIHtcbiAgbWFyZ2luLWxlZnQ6IDEwJTtcbiAgbWFyZ2luLXJpZ2h0OiAxMCU7XG59XG5cbi5oaWdobGlnaHRUZXh0IHtcbiAgYmFja2dyb3VuZDogeWVsbG93O1xufSJdfQ== */");
 
 /***/ }),
 
@@ -633,11 +658,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-let DisplayComponent = 
-// @Pipe({
-//   name: 'highlight'
-// })
-class DisplayComponent {
+let DisplayComponent = class DisplayComponent {
     constructor(dataService, router, snackbar, dialog, sanitizer) {
         this.dataService = dataService;
         this.router = router;
@@ -655,16 +676,26 @@ class DisplayComponent {
         this.ind_list = [];
         this.mat_list = [];
         this.getSelectedind = (x) => {
+            const indicator = [];
             let data = x;
+            //console.log(Object.keys(data).length);
+            data.forEach(element => {
+                const o = { [element.indicatorName]: element.metrics.split(",") };
+                indicator.push(o);
+                /// other properties and values
+            });
+            // console.log(new_obj);
+            //     let json_string=JSON.stringify(new_obj);
+            //     let array2 = JSON.parse("[" +  json_string + "]");
+            //    console.log(array2);
             // Convert the text to BLOB.
-            let textToBLOB = new Blob([JSON.stringify(data)], { type: 'application/json' });
+            let textToBLOB = new Blob([JSON.stringify({
+                    "indicator": indicator
+                })], { type: 'application/json' });
             let sFileName = "indicator.json"; // The file to save the data.
             let newLink = document.createElement("a");
             newLink.download = sFileName;
-            if (textToBLOB.size == 2) {
-                window.alert("No indicator is selected");
-            }
-            else if (window.webkitURL != null) {
+            if (window.webkitURL != null) {
                 newLink.href = window.webkitURL.createObjectURL(textToBLOB);
             }
             else {
@@ -815,11 +846,10 @@ class DisplayComponent {
             }
         }
     }
-    ////////////////// function for checkbox to select indicator indicator  //////////////////
+    ////////////////// function for checkbox to select indicator   //////////////////
     Checkbox(event, selectInd) {
         this.ind = selectInd.indicatorName;
         this.met = selectInd;
-        // console.log(selectInd)
         if (event.target.checked) {
             this.ind_list.push(this.ind);
             this.mat_list.push(this.met);
@@ -862,9 +892,6 @@ DisplayComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./display.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/component/display/display.component.html")).default,
         styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./display.component.css */ "./src/app/component/display/display.component.css")).default]
     })
-    // @Pipe({
-    //   name: 'highlight'
-    // })
 ], DisplayComponent);
 
 
@@ -875,33 +902,44 @@ DisplayComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 /*!**************************************************!*\
   !*** ./src/app/component/display/filter.pipe.ts ***!
   \**************************************************/
-/*! exports provided: FilterPipe */
+/*! exports provided: SanitizeHtmlPipe */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FilterPipe", function() { return FilterPipe; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SanitizeHtmlPipe", function() { return SanitizeHtmlPipe; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm2015/platform-browser.js");
 
 
-let FilterPipe = class FilterPipe {
-    transform(items, searchText) {
-        if (!items)
-            return [];
-        if (!searchText)
-            return items;
-        searchText = searchText.toLowerCase();
-        return items.filter(it => {
-            return it.toLowerCase().includes(searchText);
-        });
+
+let SanitizeHtmlPipe = class SanitizeHtmlPipe {
+    constructor(_sanitizer) {
+        this._sanitizer = _sanitizer;
+    }
+    transform(text, search) {
+        if (search && text) {
+            let pattern = search.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, '\\$&');
+            pattern = pattern.split(' ').filter((t) => {
+                return t.length > 0;
+            }).join(' ');
+            const regex = new RegExp(pattern, 'gi');
+            return this._sanitizer.bypassSecurityTrustHtml(text.replace(regex, (match) => `<span style="background-color: yellow;">${match}</span>`));
+        }
+        else {
+            return text;
+        }
     }
 };
-FilterPipe = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+SanitizeHtmlPipe.ctorParameters = () => [
+    { type: _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["DomSanitizer"] }
+];
+SanitizeHtmlPipe = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"])({
-        name: 'filter'
+        name: 'sanitizeHtml'
     })
-], FilterPipe);
+], SanitizeHtmlPipe);
 
 
 
@@ -1069,7 +1107,7 @@ DropdownComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (".example-spacer {\r\n    -webkit-box-flex: 1;\r\n            flex: 1 1 auto;\r\n  }\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50L2hlYWRlci9oZWFkZXIuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLG1CQUFjO1lBQWQsY0FBYztFQUNoQiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudC9oZWFkZXIvaGVhZGVyLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuZXhhbXBsZS1zcGFjZXIge1xyXG4gICAgZmxleDogMSAxIGF1dG87XHJcbiAgfSJdfQ== */");
+/* harmony default export */ __webpack_exports__["default"] = (".example-spacer {\n    -webkit-box-flex: 1;\n            flex: 1 1 auto;\n  }\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50L2hlYWRlci9oZWFkZXIuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLG1CQUFjO1lBQWQsY0FBYztFQUNoQiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudC9oZWFkZXIvaGVhZGVyLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuZXhhbXBsZS1zcGFjZXIge1xuICAgIGZsZXg6IDEgMSBhdXRvO1xuICB9Il19 */");
 
 /***/ }),
 
@@ -1098,9 +1136,9 @@ let HeaderComponent = class HeaderComponent {
     }
     ngOnInit() {
     }
-    referances() {
-        // this.router.navigate(['/referance'] );
-        this.router.navigate([]).then(result => { window.open(`/referance`, '_blank'); });
+    references() {
+        this.router.navigate(['/reference']);
+        //this.router.navigate([]).then(result => {  window.open( `/referance`, '_blank'); });
     }
     metrics() {
         // this.router.navigate(['/referance'] );
@@ -1123,22 +1161,22 @@ HeaderComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 /***/ }),
 
-/***/ "./src/app/component/referance/referance.component.css":
+/***/ "./src/app/component/reference/referance.component.css":
 /*!*************************************************************!*\
-  !*** ./src/app/component/referance/referance.component.css ***!
+  !*** ./src/app/component/reference/referance.component.css ***!
   \*************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudC9yZWZlcmFuY2UvcmVmZXJhbmNlLmNvbXBvbmVudC5jc3MifQ== */");
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudC9yZWZlcmVuY2UvcmVmZXJhbmNlLmNvbXBvbmVudC5jc3MifQ== */");
 
 /***/ }),
 
-/***/ "./src/app/component/referance/referance.component.ts":
+/***/ "./src/app/component/reference/referance.component.ts":
 /*!************************************************************!*\
-  !*** ./src/app/component/referance/referance.component.ts ***!
+  !*** ./src/app/component/reference/referance.component.ts ***!
   \************************************************************/
 /*! exports provided: ReferanceComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -1158,8 +1196,8 @@ let ReferanceComponent = class ReferanceComponent {
 ReferanceComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'app-referance',
-        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./referance.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/component/referance/referance.component.html")).default,
-        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./referance.component.css */ "./src/app/component/referance/referance.component.css")).default]
+        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./referance.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/component/reference/referance.component.html")).default,
+        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./referance.component.css */ "./src/app/component/reference/referance.component.css")).default]
     })
 ], ReferanceComponent);
 
