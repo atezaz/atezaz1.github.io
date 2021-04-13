@@ -93,7 +93,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<span class=\"OpenLAIR_Home\">\n  <!-- Not run the demo if it is not home page -->\n  <div>\n    <span style=\"padding-bottom: 2px;\">\n      <strong>Learning Events/Objectives</strong><br>\n      <span style=\"font-size: 14px;\" id=\"tooltipEvents\"\n        data-tooltipster='{\"side\":\"bottom\",\"animation\":\"fall\", \"delay\":\"200\", \"theme\":\"tooltipster-shadow\"}' title=\"\">\n        <img width=\"16px\" src=\"assets/images/question.png\"> Click here for more details\n        <span class=\"toolBoxCss\" id=\"contentEvents\">\n          <p style=\"text-align:left;\">\n            <strong>Learning Events or Objectives</strong><br />\n            A learning objective is the desired outcome of a single or multiple learning event and <br>\n            is used to establish learning activities to achieve the overall learning outcome <a target=\"_blank\"\n              href=\"https://research.tue.nl/en/publications/teacher-learning-in-the-context-of-educational-innovation-learnin\">[12]</a>.\n            <br>Learning design literature identified\n            eight learning events: create, explore, practice, <br>imitate, receive, debate, meta-learn, and experiment.\n          </p>\n        </span>\n      </span>\n    </span>\n    <br>\n    <mat-form-field>\n      <mat-select class=\"step1\" placeholder=\"Learning Events/Objectives\" name=\"Select\" [(ngModel)]=\"selected\" multiple\n        #selectionModel=\"ngModel\" (valueChange)=\"learningValueChange($event)\">\n        <app-select-check-all [model]=\"selectionModel\" [values]=\"options\" (sendCount)=\"learningValueChange($event)\">\n        </app-select-check-all>\n        <mat-option *ngFor=\"let option of options\" [value]=\"option\">\n          {{ option }}\n        </mat-option>\n      </mat-select>\n    </mat-form-field>\n  </div>\n  <div>\n    <strong>learning Activites</strong><br>\n    <span style=\"font-size: 14px;\" id=\"tooltipActivites\"\n      data-tooltipster='{\"side\":\"bottom\",\"animation\":\"fall\", \"delay\":\"200\", \"theme\":\"tooltipster-shadow\"}' title=\"\">\n      <img width=\"16px\" src=\"assets/images/question.png\"> Click here for more details\n      <span class=\"toolBoxCss\" id=\"contentActivites\">\n        <p style=\"text-align:left;\">\n          <strong>Learning Activites</strong><br />\n          A study by Gruber et al. <a target=\"_blank\"\n            href=\"https://www.researchgate.net/publication/334170760_Design_Thinking_for_Technology_Enhanced_Learning\">[3]</a>\n          took the model of learning events and added learning activities<br>\n          to identify its outcomes in LD. Learning activities are split into in-class methods and tools,<br>\n          and online methods and tools [<a target=\"_blank\"\n            href=\"https://www.researchgate.net/publication/334170760_Design_Thinking_for_Technology_Enhanced_Learning\">3</a>,\n          <a target=\"_blank\"\n            href=\"https://www.researchgate.net/publication/222945649_Factors_affecting_teachers'_participation_in_professional_learning_activities\">9</a>].\n          Examples of in-class methods and tools are exercise, <br>exam,\n          presentation, discussion, demonstration, etc. On the other hand, online methods and <br>tools are\n          blogs, wikis, forums, photo and audio notes, online tests and quizzes, e-portfolios, <br>etc.\n        </p>\n      </span>\n    </span>\n    <br /><br />\n    <ng-multiselect-dropdown class=\"dropdown-menu step2\" [placeholder]=\"'Learning Activities'\" [data]=\"dropdownList\"\n      [(ngModel)]=\"selectedItems\" [settings]=\"dropdownSettings\" (onSelect)=\"onItemSelect($event)\"\n      (onSelectAll)=\"onSelectAll($event)\" (onDeSelect)=\"checkvalue($event)\">\n    </ng-multiselect-dropdown>\n  </div>\n  <div>\n    <strong>Indicators</strong><br>\n    <span style=\"font-size: 14px;\" id=\"tooltipIndicators\"\n      data-tooltipster='{\"side\":\"bottom\",\"animation\":\"fall\", \"delay\":\"200\", \"theme\":\"tooltipster-shadow\"}' title=\"\">\n      <img width=\"16px\" src=\"assets/images/question.png\"> Click here for more details\n      <span class=\"toolBoxCss\" id=\"contentIndicators\">\n        <p style=\"text-align:left;\">\n          <strong>Indicators</strong><br />\n          Metrics are used to create indicators; an indicator is the result of the analysis of one<br>\n          or multiple metrics and gives a more comprehensive picture on a particular (abstract) <br>\n          learner status, e.g. reading comprehension, self-reflection, etc. An indicator covers a <br>\n          particular aspect of an abstract variable (e.g., student attention) by using relevant <br>\n          (measurable) items.\n        </p>\n      </span>\n    </span>\n    <br /><br />\n    <input class=\"step3\" matInput [(ngModel)]=\"searchInd\" placeholder=\"Search Indicator\"\n      (change)=\"searchIndicator(searchInd)\" />\n  </div>\n  <div>\n    <strong>Metrics</strong><br>\n    <span style=\"font-size: 14px;\" id=\"tooltipMetrics\"\n      data-tooltipster='{\"side\":\"bottom\",\"animation\":\"fall\", \"delay\":\"200\", \"theme\":\"tooltipster-shadow\"}' title=\"\">\n      <img width=\"16px\" src=\"assets/images/question.png\"> Click here for more details\n      <span class=\"toolBoxCss\" id=\"contentMetrics\">\n        <p style=\"text-align:left;\">\n          <strong>Metrics</strong><br />\n          Learning analytics applications collect data from the interaction between learners and LMSs.<br>\n          To make sense of these captured data, they need to be categorized in a corresponding unit of<br>\n          measurement (e.g. number of views, login/logout frequency & time, number of posts, etc.). In<br>\n          this paper, we refer to the units of measurements as metrics.\n        </p>\n      </span>\n    </span>\n    <br /><br />\n    <input class=\"stepMetrics\" matInput [(ngModel)]=\"searchText\" placeholder=\"Search Metrics\"\n      (change)=\"learningEventsChangeOnSearch(searchText)\" />\n  </div>\n\n\n  <div style=\"margin-left:50px\">\n    <label style=\"color: gray; font-size: 15px;\"> Seleted Indicator(s)</label>\n    <ul id=\"reset\" style=\"line-height: 15%; font-size: 15px;\" *ngFor=\"let selectInd of ind_list\">\n      <li>\n        {{selectInd}}\n\n      </li>\n\n    </ul>\n    <span style=\"padding-top: 16px;  padding-bottom: 16px;\">\n      <button class=\"stepDownload\" mat-raised-button color=\"primary\"\n        (click)=\"getSelectedind(mat_list)\">Download</button>\n    </span>\n    <button mat-button (click)=\"reset()\">Reset</button>\n\n\n  </div>\n\n\n\n  <ng-template #secondDialog>\n    <h2 matDialogTitle>Metrics</h2>\n    <mat-dialog-content>\n      <ul *ngFor=\"let mat of sp\">\n        <!-- style=\"line-height: 20%\" -->\n        <li>{{ mat }}</li>\n      </ul>\n    </mat-dialog-content>\n    <button mat-button mat-dialog-close>Close</button>\n  </ng-template>\n\n\n  <table style=\" margin-left: 10px;\">\n    <thead>\n      <th>Learning Events/Objectives</th>\n      <div>\n        <th style=\" margin-left: 40px;\">Learning Activities</th>\n      </div>\n      <div style=\" margin-left: 80px;\">\n        <th>Indicators</th>\n      </div>\n    </thead>\n\n    <!-- for loop for learning events -->\n    <tr *ngFor=\"let learningEvents of data\">\n      <td style=\"width: 15; \" class=\"leraningevents\">{{ learningEvents.LearningEvents }}</td>\n      <td>\n    <tr class=\"activities\" *ngFor=\"let LearningActivities of learningEvents.LearningActivities\">\n      <td style=\"width: 210px; \">\n        {{ LearningActivities.Name }}\n      </td>\n      <td class=\"highlightIndicators\">\n        <!-- loop for indicators -->\n        <tr *ngFor=\"let indic of LearningActivities.indicator\" >\n          <input class=\"step4\" #indicatorCheckbox type=\"checkbox\" value=\"indic\" (change)=\"Checkbox($event,indic)\" />\n    \n          <a class=\"sortable stepViewMetrics\" (click)=\"getMeterics(indic)\">\n            <span [innerHTML]=\" indic.indicatorName  | sanitizeHtml : searchInd\">\n              {{ indic.indicatorName  }}\n            </span>\n           </a>\n      <td *ngIf=\"searchText\">\n    <tr>\n      <a class=\"sortable\">\n        <span [innerHTML]=\" indic.metrics  | sanitizeHtml : searchText\">\n          {{ indic.metrics }}\n        </span>\n      </a>\n    </tr>\n    </td>\n    </tr>\n    </td>\n    </tr>\n    </td>\n    </tr>\n  </table>\n</span>\n";
+    __webpack_exports__["default"] = "<span class=\"OpenLAIR_Home\">\n  <!-- Not run the demo if it is not home page -->\n  <div>\n    <span style=\"padding-bottom: 2px;\">\n      <strong>Learning Events/Objectives</strong><br>\n      <span style=\"font-size: 14px;\" id=\"tooltipEvents\"\n        data-tooltipster='{\"side\":\"bottom\",\"animation\":\"fall\", \"delay\":\"200\", \"theme\":\"tooltipster-shadow\"}' title=\"\">\n        <img width=\"16px\" src=\"assets/images/question.png\"> Click here for more details\n        <span class=\"toolBoxCss\" id=\"contentEvents\">\n          <p style=\"text-align:left;\">\n            <strong>Learning Events or Objectives</strong><br />\n            A learning objective is the desired outcome of a single or multiple learning event and <br>\n            is used to establish learning activities to achieve the overall learning outcome <a target=\"_blank\"\n              href=\"https://research.tue.nl/en/publications/teacher-learning-in-the-context-of-educational-innovation-learnin\">[12]</a>.\n            <br>Learning design literature identified\n            eight learning events: create, explore, practice, <br>imitate, receive, debate, meta-learn, and experiment.\n          </p>\n        </span>\n      </span>\n    </span>\n    <br>\n    <mat-form-field>\n      <mat-select class=\"step1\" placeholder=\"Learning Events/Objectives\" name=\"Select\" [(ngModel)]=\"selected\" multiple\n        #selectionModel=\"ngModel\" (valueChange)=\"learningValueChange($event)\">\n        <app-select-check-all [model]=\"selectionModel\" [values]=\"options\" (sendCount)=\"learningValueChange($event)\">\n        </app-select-check-all>\n        <mat-option *ngFor=\"let option of options\" [value]=\"option\">\n          {{ option }}\n        </mat-option>\n      </mat-select>\n    </mat-form-field>\n  </div>\n  <div>\n    <strong>Learning Activites</strong><br>\n    <span style=\"font-size: 14px;\" id=\"tooltipActivites\"\n      data-tooltipster='{\"side\":\"bottom\",\"animation\":\"fall\", \"delay\":\"200\", \"theme\":\"tooltipster-shadow\"}' title=\"\">\n      <img width=\"16px\" src=\"assets/images/question.png\"> Click here for more details\n      <span class=\"toolBoxCss\" id=\"contentActivites\">\n        <p style=\"text-align:left;\">\n          <strong>Learning Activites</strong><br />\n          A study by Gruber et al. <a target=\"_blank\"\n            href=\"https://www.researchgate.net/publication/334170760_Design_Thinking_for_Technology_Enhanced_Learning\">[3]</a>\n          took the model of learning events and added learning activities<br>\n          to identify its outcomes in LD. Learning activities are split into in-class methods and tools,<br>\n          and online methods and tools [<a target=\"_blank\"\n            href=\"https://www.researchgate.net/publication/334170760_Design_Thinking_for_Technology_Enhanced_Learning\">3</a>,\n          <a target=\"_blank\"\n            href=\"https://www.researchgate.net/publication/222945649_Factors_affecting_teachers'_participation_in_professional_learning_activities\">9</a>].\n          Examples of in-class methods and tools are exercise, <br>exam,\n          presentation, discussion, demonstration, etc. On the other hand, online methods and <br>tools are\n          blogs, wikis, forums, photo and audio notes, online tests and quizzes, e-portfolios, <br>etc.\n        </p>\n      </span>\n    </span>\n    <br /><br />\n    <ng-multiselect-dropdown class=\"dropdown-menu step2\" [placeholder]=\"'Learning Activities'\" [data]=\"dropdownList\"\n      [(ngModel)]=\"selectedItems\" [settings]=\"dropdownSettings\" (onSelect)=\"onItemSelect($event)\"\n      (onSelectAll)=\"onSelectAll($event)\" (onDeSelect)=\"checkvalue($event)\">\n    </ng-multiselect-dropdown>\n  </div>\n  <div>\n    <strong>Indicators</strong><br>\n    <span style=\"font-size: 14px;\" id=\"tooltipIndicators\"\n      data-tooltipster='{\"side\":\"bottom\",\"animation\":\"fall\", \"delay\":\"200\", \"theme\":\"tooltipster-shadow\"}' title=\"\">\n      <span class=\"stepDefine\"><img width=\"16px\" src=\"assets/images/question.png\"> Click here for more details</span>\n      <span class=\"toolBoxCss\" id=\"contentIndicators\">\n        <p style=\"height: 572px;\">\n          <strong>Indicators</strong><br />\n          Metrics (measurements) are used to create indicators; an indicator is the result of the analysis of one<br>\n          or multiple metrics (e.g. number of views, login/logout frequency & time, number of posts, etc.) and gives <br>\n          a more comprehensive picture on a particular (abstract) learner status, e.g. reading comprehension, <br>\n          self-reflection, etc. An indicator covers a particular aspect of an abstract variable (e.g., student engagement)<br>\n           by using relevant (measurable) items.<br><br>\n           Here is an example of Student Engagement in Moodle. <br>\n           <img src=\"assets/images/engagement.jpg\">\n        </p>\n      </span>\n    </span>\n    <br /><br />\n    <input class=\"step3\" matInput [(ngModel)]=\"searchInd\" placeholder=\"Search Indicator\"\n      (change)=\"searchIndicator(searchInd)\" />\n  </div>\n  <div>\n    <strong>Metrics</strong><br>\n    <span style=\"font-size: 14px;\" id=\"tooltipMetrics\"\n      data-tooltipster='{\"side\":\"bottom\",\"animation\":\"fall\", \"delay\":\"200\", \"theme\":\"tooltipster-shadow\"}' title=\"\">\n      <img width=\"16px\" src=\"assets/images/question.png\"> Click here for more details\n      <span class=\"toolBoxCss\" id=\"contentMetrics\">\n        <p style=\"text-align:left;\">\n          <strong>Metrics</strong><br />\n          Learning analytics applications collect data from the interaction between learners and LMSs.<br>\n          To make sense of these captured data, they need to be categorized in a corresponding unit of<br>\n          measurement (e.g. number of views, login/logout frequency & time, number of posts, etc.). In<br>\n          this paper, we refer to the units of measurements as metrics.\n        </p>\n      </span>\n    </span>\n    <br /><br />\n    <input class=\"stepMetrics\" matInput [(ngModel)]=\"searchText\" placeholder=\"Search Metrics\"\n      (change)=\"learningEventsChangeOnSearch(searchText)\" />\n  </div>\n\n\n  <div style=\"margin-left:50px\">\n    <label style=\"color: gray; font-size: 15px;\"> Seleted Indicator(s)</label>\n    <ul id=\"reset\" style=\"line-height: 15%; font-size: 15px;\" *ngFor=\"let selectInd of ind_list\">\n      <li>\n        {{selectInd}}\n\n      </li>\n\n    </ul>\n    <span style=\"padding-top: 16px;  padding-bottom: 16px;\">\n      <button class=\"stepDownload\" mat-raised-button color=\"primary\"\n        (click)=\"getSelectedind(mat_list)\">Download</button>\n    </span>\n    <button mat-button (click)=\"reset()\">Reset</button>\n\n\n  </div>\n\n\n\n  <ng-template #secondDialog>\n    <h2 matDialogTitle>Metrics</h2>\n    <mat-dialog-content>\n      <ul *ngFor=\"let mat of sp\">\n        <!-- style=\"line-height: 20%\" -->\n        <li>{{ mat }}</li>\n      </ul>\n    </mat-dialog-content>\n    <button mat-button mat-dialog-close>Close</button>\n  </ng-template>\n\n\n  <table style=\" margin-left: 10px;\">\n    <thead>\n      <th>Learning Events/Objectives</th>\n      <div>\n        <th style=\" margin-left: 40px;\">Learning Activities</th>\n      </div>\n      <div style=\" margin-left: 80px;\">\n        <th>Indicators</th>\n      </div>\n    </thead>\n\n    <!-- for loop for learning events -->\n    <tr *ngFor=\"let learningEvents of data\">\n      <td style=\"width: 15; \" class=\"leraningevents\">{{ learningEvents.LearningEvents }}</td>\n      <td>\n    <tr class=\"activities\" *ngFor=\"let LearningActivities of learningEvents.LearningActivities\">\n      <td style=\"width: 210px; \">\n        {{ LearningActivities.Name }}\n      </td>\n      <td class=\"highlightIndicators\">\n        <!-- loop for indicators -->\n        <tr *ngFor=\"let indic of LearningActivities.indicator\" >\n          <input class=\"step4\" #indicatorCheckbox type=\"checkbox\" value=\"indic\" (change)=\"Checkbox($event,indic)\" />\n    \n          <a class=\"sortable stepViewMetrics\" (click)=\"getMeterics(indic)\">\n            <span [innerHTML]=\" indic.indicatorName  | sanitizeHtml : searchInd\">\n              {{ indic.indicatorName  }}\n            </span>\n           </a>\n      <td *ngIf=\"searchText\">\n    <tr>\n      <a class=\"sortable\">\n        <span [innerHTML]=\" indic.metrics  | sanitizeHtml : searchText\">\n          {{ indic.metrics }}\n        </span>\n      </a>\n    </tr>\n    </td>\n    </tr>\n    </td>\n    </tr>\n    </td>\n    </tr>\n  </table>\n</span>\n";
     /***/
   },
 
@@ -1298,6 +1298,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /*#__PURE__*/
     function () {
       function DisplayComponent(dataService, router, snackbar, dialog, sanitizer) {
+        var _this2 = this;
+
         _classCallCheck(this, DisplayComponent);
 
         this.dataService = dataService;
@@ -1305,10 +1307,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         this.snackbar = snackbar;
         this.dialog = dialog;
         this.sanitizer = sanitizer;
-        this.dropdownList = [];
-        this.selectedItems = [];
+        this.dropdownList = []; //learning activities dropdown
+
+        this.selectedItems = []; //learning activities dropdown
+
         this.name = [];
-        this.options = [];
+        this.options = []; // learning events options
+
         this.learningEvents = [];
         this.learningAct = [];
         this.isLoaded = false;
@@ -1318,13 +1323,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         this.getSelectedind = function (x) {
           var indicator = [];
-          var data = x; //console.log(Object.keys(data).length);
+          var data = x; //printing senario
 
+          console.log("For your particular senario your learning objective(s) is/are ", _this2.selectedevent[0]);
+          console.log("The learning activities are ", _this2.selectedItems[0]);
+          console.log("The possible indicators are ", data[0].indicatorName);
+          console.log("and there metrics are ", data[0].metrics);
           data.forEach(function (element) {
             var o = _defineProperty({}, element.indicatorName, element.metrics.split(","));
 
             indicator.push(o); /// other properties and values
-          }); // console.log(new_obj);
+          }); //console.log(indicator);
+          // console.log(new_obj);
           //     let json_string=JSON.stringify(new_obj);
           //     let array2 = JSON.parse("[" +  json_string + "]");
           //    console.log(array2);
@@ -1335,7 +1345,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           })], {
             type: 'application/json'
           });
-          var sFileName = "indicator.json"; // The file to save the data.
+          var sFileName = "indicators.json"; // The file to save the data.
 
           var newLink = document.createElement("a");
           newLink.download = sFileName;
@@ -1369,26 +1379,27 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "onItemSelect",
         value: function onItemSelect(item) {
-          var _this2 = this;
+          var _this3 = this;
 
+          //console.log(item);
           var p = this.selectedevent;
           this.dataService.getdata().subscribe(function (data) {
-            _this2.data = data;
-            _this2.isLoaded = true;
+            _this3.data = data;
+            _this3.isLoaded = true;
 
-            var event = _this2.data.filter(function (obj) {
+            var event = _this3.data.filter(function (obj) {
               return p.includes(obj.LearningEvents);
             });
 
-            _this2.setLearningActivities(event);
+            _this3.setLearningActivities(event);
 
             if (p = "") {
-              _this2.data = event;
+              _this3.data = event;
             }
 
-            var newArray = _this2.selectedItems;
+            var newArray = _this3.selectedItems;
 
-            _this2.data.filter(function (obj) {
+            _this3.data.filter(function (obj) {
               obj.LearningActivities = obj.LearningActivities.filter(function (obj2) {
                 return newArray.includes(obj2.Name);
               });
@@ -1404,21 +1415,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "fetchdata",
         value: function fetchdata() {
-          var _this3 = this;
+          var _this4 = this;
 
           this.dataService.getdata().subscribe(function (data) {
-            _this3.data = data; /// complete data present in database
+            _this4.data = data; /// complete data present in database
 
-            _this3.isLoaded = true;
+            _this4.isLoaded = true;
             var _iteratorNormalCompletion = true;
             var _didIteratorError = false;
             var _iteratorError = undefined;
 
             try {
-              for (var _iterator = _this3.data[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+              for (var _iterator = _this4.data[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
                 var val = _step.value;
 
-                _this3.options.push(val["LearningEvents"]);
+                _this4.options.push(val["LearningEvents"]);
               }
             } catch (err) {
               _didIteratorError = true;
@@ -1435,11 +1446,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               }
             }
 
-            _this3.selected.push(_this3.options);
+            _this4.selected.push(_this4.options);
 
-            _this3.learningValueChange("Select All");
+            _this4.learningValueChange("Select All");
 
-            _this3.setLearningActivities(_this3.data);
+            _this4.setLearningActivities(_this4.data);
           });
         } ////////////////pop up by click Indicator to show meterics ///////////
 
@@ -1454,22 +1465,22 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "learningValueChange",
         value: function learningValueChange(p) {
-          var _this4 = this;
+          var _this5 = this;
 
           this.selectedevent = p;
           this.dataService.getdata().subscribe(function (data) {
-            _this4.data = data;
-            _this4.isLoaded = true;
+            _this5.data = data;
+            _this5.isLoaded = true;
 
             if (p == "Select All") {} else {
-              var event = _this4.data.filter(function (obj) {
+              var event = _this5.data.filter(function (obj) {
                 return p.includes(obj.LearningEvents);
               });
 
-              _this4.setLearningActivities(event);
+              _this5.setLearningActivities(event);
 
               if (p != "") {
-                _this4.data = event;
+                _this5.data = event;
               }
             }
           });
@@ -1553,11 +1564,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "learningEventsChangeOnSearch",
         value: function learningEventsChangeOnSearch(search) {
-          var _this5 = this;
+          var _this6 = this;
 
           if (search) {
             this.dataService.getsearchresult(search).subscribe(function (data) {
-              _this5.data = data;
+              _this6.data = data;
             });
           } else {
             this.fetchdata();
@@ -1567,11 +1578,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "searchIndicator",
         value: function searchIndicator(search) {
-          var _this6 = this;
+          var _this7 = this;
 
           if (search) {
             this.dataService.getsearchind(search).subscribe(function (data) {
-              _this6.data = data;
+              _this7.data = data;
             });
           } else {
             this.fetchdata();
