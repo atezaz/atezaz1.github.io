@@ -133,7 +133,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "\n<div class=\"header\">\n    <mat-toolbar color='primary'><span class=\"step0\">  <a  href=\"https://atezaz.github.io/\"><img style=\"height: 58px;  padding-top: 8px;\" src=\"assets/images/logo.png\"></a></span> \n        <span class=\"example-spacer\"></span> \n        \n    \n   <!-- <a href=\"#\" onclick=\"myTour()\">Start Tour</a> --> \n    <!--<a mat-button class=\"stepReferences\"  (click)='references()'target=\"_blank\">References</a>  --> \n    <a mat-button class=\"stepReferences\"  href=\"https://atezaz.github.io/References.html\" target=\"_blank\">References</a>\n    <button class=\"mat-button mat-button-base stepStartTour\" id=\"myTourBtn\">Start Tour<img width=\"15px\" src=\"assets/images/tour.png\"></button>\n</mat-toolbar>\n</div>\n";
+    __webpack_exports__["default"] = "\n<div class=\"header\">\n    <mat-toolbar color='primary'><span class=\"step0\">  <a  href=\"https://atezaz.github.io/\"><img style=\"height: 58px;  padding-top: 8px;\" src=\"assets/images/logo.png\"></a></span> \n        <span class=\"example-spacer\"></span> \n        \n    \n   <!-- <a href=\"#\" onclick=\"myTour()\">Start Tour</a> --> \n    <!--<a mat-button class=\"stepReferences\"  (click)='references()'target=\"_blank\">References</a>  --> \n    <a mat-button class=\"stepReferences\"  href=\"https://atezaz.github.io/references.html\" target=\"_blank\">References</a>\n    <button class=\"mat-button mat-button-base stepStartTour\" id=\"myTourBtn\">Start Tour<img width=\"15px\" src=\"assets/images/tour.png\"></button>\n</mat-toolbar>\n</div>\n";
     /***/
   },
 
