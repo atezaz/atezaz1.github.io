@@ -2205,12 +2205,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /*#__PURE__*/
     function () {
       //68.65.123.130
+      //198.187.29.73
       function DataService(http) {
         _classCallCheck(this, DataService);
 
         this.http = http; //uri='http://localhost:3001';
 
-        this.uri = 'https://csspreparation.academy/openlair';
+        this.uri = 'https://198.187.29.73/openlair';
       }
 
       _createClass(DataService, [{
