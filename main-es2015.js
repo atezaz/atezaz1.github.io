@@ -1233,7 +1233,7 @@ let DataService = class DataService {
     constructor(http) {
         this.http = http;
         //uri='http://localhost:3001';
-        this.uri = 'http://programmingzen.org/openlair';
+        this.uri = 'https://programmingzen.org/openlair';
     }
     getdata() {
         return this.http.get(`${this.uri}/display/data`);
