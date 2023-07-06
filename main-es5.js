@@ -1212,19 +1212,44 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _auth_guard_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
     /*! ./auth-guard.service */
     "./src/app/auth-guard.service.ts");
+    /* harmony import */
+
+
+    var _component_reference_referance_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+    /*! ./component/reference/referance.component */
+    "./src/app/component/reference/referance.component.ts");
+    /* harmony import */
+
+
+    var _component_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
+    /*! ./component/dashboard/dashboard.component */
+    "./src/app/component/dashboard/dashboard.component.ts");
 
     var routes = [//{ path: '/display/data/s', redirectTo: '/', pathMatch: 'full' },
     //{ path: 'display/data', component: DisplayComponent },
+    //{ path: '', component: DisplayComponent },
+    //{ path: 'admin', component: AdminComponent },
+    // { path: 'add/data', component: AddDataComponent, canActivate: [AuthGuardService] },
     {
-      path: '',
-      component: _component_display_display_component__WEBPACK_IMPORTED_MODULE_3__["DisplayComponent"]
-    }, {
-      path: 'admin',
-      component: _component_admin_admin_component__WEBPACK_IMPORTED_MODULE_4__["AdminComponent"]
-    }, {
-      path: 'add/data',
+      path: "add/data",
       component: _component_add_data_add_data_component__WEBPACK_IMPORTED_MODULE_5__["AddDataComponent"],
       canActivate: [_auth_guard_service__WEBPACK_IMPORTED_MODULE_6__["AuthGuardService"]]
+    }, {
+      path: "reference",
+      component: _component_reference_referance_component__WEBPACK_IMPORTED_MODULE_7__["ReferanceComponent"]
+    }, {
+      path: "login",
+      component: _component_admin_admin_component__WEBPACK_IMPORTED_MODULE_4__["AdminComponent"]
+    }, {
+      path: "dashboard",
+      component: _component_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_8__["DashboardComponent"]
+    }, {
+      path: "",
+      component: _component_display_display_component__WEBPACK_IMPORTED_MODULE_3__["DisplayComponent"]
+    }, {
+      path: "",
+      redirectTo: "display/data",
+      pathMatch: "full"
     }];
 
     var AppRoutingModule = function AppRoutingModule() {
@@ -1695,10 +1720,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     }, {
       path: "",
       redirectTo: "display/data",
-      pathMatch: "full"
-    }, {
-      path: "add/data",
-      redirectTo: "add/data",
       pathMatch: "full"
     }];
 
