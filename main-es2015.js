@@ -883,7 +883,7 @@ const routes = [
     //{ path: '', component: DisplayComponent },
     //{ path: 'admin', component: AdminComponent },
     // { path: 'add/data', component: AddDataComponent, canActivate: [AuthGuardService] },
-    { path: "add/data", component: _component_add_data_add_data_component__WEBPACK_IMPORTED_MODULE_5__["AddDataComponent"], canActivate: [_auth_guard_service__WEBPACK_IMPORTED_MODULE_6__["AuthGuardService"]] },
+    { path: "add", component: _component_add_data_add_data_component__WEBPACK_IMPORTED_MODULE_5__["AddDataComponent"], canActivate: [_auth_guard_service__WEBPACK_IMPORTED_MODULE_6__["AuthGuardService"]] },
     { path: "reference", component: _component_reference_referance_component__WEBPACK_IMPORTED_MODULE_7__["ReferanceComponent"] },
     { path: "login", component: _component_admin_admin_component__WEBPACK_IMPORTED_MODULE_4__["AdminComponent"] },
     { path: "dashboard", component: _component_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_8__["DashboardComponent"] },
@@ -1082,7 +1082,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const routes = [
-    { path: "add/data", component: _component_add_data_add_data_component__WEBPACK_IMPORTED_MODULE_13__["AddDataComponent"], canActivate: [_auth_guard_service__WEBPACK_IMPORTED_MODULE_22__["AuthGuardService"]] },
+    { path: "add", component: _component_add_data_add_data_component__WEBPACK_IMPORTED_MODULE_13__["AddDataComponent"], canActivate: [_auth_guard_service__WEBPACK_IMPORTED_MODULE_22__["AuthGuardService"]] },
     { path: "reference", component: _component_reference_referance_component__WEBPACK_IMPORTED_MODULE_20__["ReferanceComponent"] },
     { path: "login", component: _component_admin_admin_component__WEBPACK_IMPORTED_MODULE_61__["AdminComponent"] },
     { path: "dashboard", component: _component_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_23__["DashboardComponent"] },
@@ -7418,7 +7418,7 @@ let AdminComponent = class AdminComponent {
             .subscribe(res => {
             this.loginForm.reset();
             this.dataService.loggedIn = true;
-            this.router.navigate(['add/data']);
+            this.router.navigate(['add']);
         }, err => alert('User NOT found!'));
     }
 };
@@ -8199,7 +8199,7 @@ let HeaderComponent = class HeaderComponent {
     ngOnInit() {
     }
     addIndicators() {
-        this.router.navigate(['/add/data']);
+        this.router.navigate(['/add']);
         //this.router.navigate([]).then(result => {  window.open( `/referance`, '_blank'); });
     }
     references() {

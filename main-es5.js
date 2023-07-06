@@ -1231,7 +1231,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     //{ path: 'admin', component: AdminComponent },
     // { path: 'add/data', component: AddDataComponent, canActivate: [AuthGuardService] },
     {
-      path: "add/data",
+      path: "add",
       component: _component_add_data_add_data_component__WEBPACK_IMPORTED_MODULE_5__["AddDataComponent"],
       canActivate: [_auth_guard_service__WEBPACK_IMPORTED_MODULE_6__["AuthGuardService"]]
     }, {
@@ -1702,7 +1702,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     "./src/app/component/admin/admin.component.ts");
 
     var routes = [{
-      path: "add/data",
+      path: "add",
       component: _component_add_data_add_data_component__WEBPACK_IMPORTED_MODULE_13__["AddDataComponent"],
       canActivate: [_auth_guard_service__WEBPACK_IMPORTED_MODULE_22__["AuthGuardService"]]
     }, {
@@ -8685,7 +8685,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
             _this4.dataService.loggedIn = true;
 
-            _this4.router.navigate(['add/data']);
+            _this4.router.navigate(['add']);
           }, function (err) {
             return alert('User NOT found!');
           });
@@ -9768,7 +9768,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "addIndicators",
         value: function addIndicators() {
-          this.router.navigate(['/add/data']); //this.router.navigate([]).then(result => {  window.open( `/referance`, '_blank'); });
+          this.router.navigate(['/add']); //this.router.navigate([]).then(result => {  window.open( `/referance`, '_blank'); });
         }
       }, {
         key: "references",
