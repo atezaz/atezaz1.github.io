@@ -1078,6 +1078,7 @@ const routes = [
     { path: "dashboard", component: _component_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_23__["DashboardComponent"] },
     { path: "display/data", component: _component_display_display_component__WEBPACK_IMPORTED_MODULE_18__["DisplayComponent"] },
     { path: "", redirectTo: "display/data", pathMatch: "full" },
+    { path: "add/data", redirectTo: "add/data", pathMatch: "full" },
 ];
 let AppModule = class AppModule {
 };
@@ -8290,14 +8291,14 @@ __webpack_require__.r(__webpack_exports__);
 
 
 let DataService = class DataService {
-    //uri = 'http://localhost:49160/openlair';
-    //uri = 'http://localhost:3001/openlair';  //local
     //68.65.123.130    OLD
     //198.187.29.73
     constructor(http) {
         this.http = http;
         //uri = 'https://programmingzen.org/openlair';
-        this.uri = 'https://backend.openlair.edutec.science/openlair'; //live
+        //uri = 'https://backend.openlair.edutec.science/openlair'; //live
+        //uri = 'http://localhost:49160/openlair';
+        this.uri = 'http://localhost:3001/openlair'; //local
         //this.currentUserSubject = new BehaviorSubject<User>(JSON.parse(localStorage.getItem('currentUser')));
         //this.currentUser = this.currentUserSubject.asObservable();
     }

@@ -1696,6 +1696,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       path: "",
       redirectTo: "display/data",
       pathMatch: "full"
+    }, {
+      path: "add/data",
+      redirectTo: "add/data",
+      pathMatch: "full"
     }];
 
     var AppModule = function AppModule() {
@@ -9900,16 +9904,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     "./node_modules/rxjs/_esm2015/operators/index.js");
 
     var DataService = /*#__PURE__*/function () {
-      //uri = 'http://localhost:49160/openlair';
-      //uri = 'http://localhost:3001/openlair';  //local
       //68.65.123.130    OLD
       //198.187.29.73
       function DataService(http) {
         _classCallCheck(this, DataService);
 
         this.http = http; //uri = 'https://programmingzen.org/openlair';
+        //uri = 'https://backend.openlair.edutec.science/openlair'; //live
+        //uri = 'http://localhost:49160/openlair';
 
-        this.uri = 'https://backend.openlair.edutec.science/openlair'; //live
+        this.uri = 'http://localhost:3001/openlair'; //local
         //this.currentUserSubject = new BehaviorSubject<User>(JSON.parse(localStorage.getItem('currentUser')));
         //this.currentUser = this.currentUserSubject.asObservable();
       }
