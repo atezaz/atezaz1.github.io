@@ -960,65 +960,64 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm2015/platform-browser.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
-/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
-/* harmony import */ var angular_font_awesome__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! angular-font-awesome */ "./node_modules/angular-font-awesome/dist/angular-font-awesome.js");
-/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm2015/material.js");
-/* harmony import */ var ng_multiselect_dropdown__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ng-multiselect-dropdown */ "./node_modules/ng-multiselect-dropdown/fesm2015/ng-multiselect-dropdown.js");
-/* harmony import */ var highcharts_angular__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! highcharts-angular */ "./node_modules/highcharts-angular/fesm2015/highcharts-angular.js");
-/* harmony import */ var angular2_multiselect_dropdown__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! angular2-multiselect-dropdown */ "./node_modules/angular2-multiselect-dropdown/fesm2015/angular2-multiselect-dropdown.js");
-/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var _component_add_data_add_data_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./component/add-data/add-data.component */ "./src/app/component/add-data/add-data.component.ts");
-/* harmony import */ var _component_header_header_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./component/header/header.component */ "./src/app/component/header/header.component.ts");
-/* harmony import */ var _component_display_filter_pipe__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./component/display/filter.pipe */ "./src/app/component/display/filter.pipe.ts");
-/* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/fesm2015/animations.js");
-/* harmony import */ var _data_service__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./data.service */ "./src/app/data.service.ts");
-/* harmony import */ var _component_display_display_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./component/display/display.component */ "./src/app/component/display/display.component.ts");
-/* harmony import */ var _component_dropdown_dropdown_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./component/dropdown/dropdown.component */ "./src/app/component/dropdown/dropdown.component.ts");
-/* harmony import */ var _component_reference_referance_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./component/reference/referance.component */ "./src/app/component/reference/referance.component.ts");
-/* harmony import */ var _component_display_select_check_all_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./component/display/select-check-all.component */ "./src/app/component/display/select-check-all.component.ts");
-/* harmony import */ var _auth_guard_service__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./auth-guard.service */ "./src/app/auth-guard.service.ts");
-/* harmony import */ var _component_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./component/dashboard/dashboard.component */ "./src/app/component/dashboard/dashboard.component.ts");
-/* harmony import */ var _chart_manager_chart_manager_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./chart-manager/chart-manager.component */ "./src/app/chart-manager/chart-manager.component.ts");
-/* harmony import */ var _charts_student_interaction_patterns_student_interaction_patterns_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./charts/student-interaction-patterns/student-interaction-patterns.component */ "./src/app/charts/student-interaction-patterns/student-interaction-patterns.component.ts");
-/* harmony import */ var _charts_competency_competency_component__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./charts/competency/competency.component */ "./src/app/charts/competency/competency.component.ts");
-/* harmony import */ var _chart_helper_service__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./chart-helper.service */ "./src/app/chart-helper.service.ts");
-/* harmony import */ var _charts_reading_analytics_reading_analytics_component__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./charts/reading-analytics/reading-analytics.component */ "./src/app/charts/reading-analytics/reading-analytics.component.ts");
-/* harmony import */ var _charts_video_analytics_video_analytics_component__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./charts/video-analytics/video-analytics.component */ "./src/app/charts/video-analytics/video-analytics.component.ts");
-/* harmony import */ var _charts_learning_progress_learning_progress_component__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./charts/learning-progress/learning-progress.component */ "./src/app/charts/learning-progress/learning-progress.component.ts");
-/* harmony import */ var _charts_writing_analytics_writing_analytics_component__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./charts/writing-analytics/writing-analytics.component */ "./src/app/charts/writing-analytics/writing-analytics.component.ts");
-/* harmony import */ var _charts_discussion_quality_discussion_quality_component__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./charts/discussion-quality/discussion-quality.component */ "./src/app/charts/discussion-quality/discussion-quality.component.ts");
-/* harmony import */ var _charts_clickstream_analysis_clickstream_analysis_component__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./charts/clickstream-analysis/clickstream-analysis.component */ "./src/app/charts/clickstream-analysis/clickstream-analysis.component.ts");
-/* harmony import */ var _charts_video_engagements_video_engagements_component__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./charts/video-engagements/video-engagements.component */ "./src/app/charts/video-engagements/video-engagements.component.ts");
-/* harmony import */ var _charts_initiative_initiative_component__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ./charts/initiative/initiative.component */ "./src/app/charts/initiative/initiative.component.ts");
-/* harmony import */ var _charts_social_analysis_social_analysis_component__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! ./charts/social-analysis/social-analysis.component */ "./src/app/charts/social-analysis/social-analysis.component.ts");
-/* harmony import */ var _charts_droppingout_droppingout_component__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! ./charts/droppingout/droppingout.component */ "./src/app/charts/droppingout/droppingout.component.ts");
-/* harmony import */ var _charts_time_distribution_time_distribution_component__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(/*! ./charts/time-distribution/time-distribution.component */ "./src/app/charts/time-distribution/time-distribution.component.ts");
-/* harmony import */ var _charts_time_planning_time_planning_component__WEBPACK_IMPORTED_MODULE_39__ = __webpack_require__(/*! ./charts/time-planning/time-planning.component */ "./src/app/charts/time-planning/time-planning.component.ts");
-/* harmony import */ var _charts_student_comparison_student_comparison_component__WEBPACK_IMPORTED_MODULE_40__ = __webpack_require__(/*! ./charts/student-comparison/student-comparison.component */ "./src/app/charts/student-comparison/student-comparison.component.ts");
-/* harmony import */ var _charts_engagement_performance_engagement_performance_component__WEBPACK_IMPORTED_MODULE_41__ = __webpack_require__(/*! ./charts/engagement-performance/engagement-performance.component */ "./src/app/charts/engagement-performance/engagement-performance.component.ts");
-/* harmony import */ var _charts_online_change_detection_online_change_detection_component__WEBPACK_IMPORTED_MODULE_42__ = __webpack_require__(/*! ./charts/online-change-detection/online-change-detection.component */ "./src/app/charts/online-change-detection/online-change-detection.component.ts");
-/* harmony import */ var _charts_gamification_gamification_component__WEBPACK_IMPORTED_MODULE_43__ = __webpack_require__(/*! ./charts/gamification/gamification.component */ "./src/app/charts/gamification/gamification.component.ts");
-/* harmony import */ var _charts_predict_coursecompletion_predict_coursecompletion_component__WEBPACK_IMPORTED_MODULE_44__ = __webpack_require__(/*! ./charts/predict-coursecompletion/predict-coursecompletion.component */ "./src/app/charts/predict-coursecompletion/predict-coursecompletion.component.ts");
-/* harmony import */ var _charts_procrastination_procrastination_component__WEBPACK_IMPORTED_MODULE_45__ = __webpack_require__(/*! ./charts/procrastination/procrastination.component */ "./src/app/charts/procrastination/procrastination.component.ts");
-/* harmony import */ var _charts_group_participation_group_participation_component__WEBPACK_IMPORTED_MODULE_46__ = __webpack_require__(/*! ./charts/group-participation/group-participation.component */ "./src/app/charts/group-participation/group-participation.component.ts");
-/* harmony import */ var _charts_clustering_clustering_component__WEBPACK_IMPORTED_MODULE_47__ = __webpack_require__(/*! ./charts/clustering/clustering.component */ "./src/app/charts/clustering/clustering.component.ts");
-/* harmony import */ var _charts_predict_exam_success_predict_exam_success_component__WEBPACK_IMPORTED_MODULE_48__ = __webpack_require__(/*! ./charts/predict-exam-success/predict-exam-success.component */ "./src/app/charts/predict-exam-success/predict-exam-success.component.ts");
-/* harmony import */ var _charts_final_grade_prediction_final_grade_prediction_component__WEBPACK_IMPORTED_MODULE_49__ = __webpack_require__(/*! ./charts/final-grade-prediction/final-grade-prediction.component */ "./src/app/charts/final-grade-prediction/final-grade-prediction.component.ts");
-/* harmony import */ var _charts_learning_behaviour_learning_behaviour_component__WEBPACK_IMPORTED_MODULE_50__ = __webpack_require__(/*! ./charts/learning-behaviour/learning-behaviour.component */ "./src/app/charts/learning-behaviour/learning-behaviour.component.ts");
-/* harmony import */ var _charts_social_network_analysis_social_network_analysis_component__WEBPACK_IMPORTED_MODULE_51__ = __webpack_require__(/*! ./charts/social-network-analysis/social-network-analysis.component */ "./src/app/charts/social-network-analysis/social-network-analysis.component.ts");
-/* harmony import */ var _charts_self_motivation_self_motivation_component__WEBPACK_IMPORTED_MODULE_52__ = __webpack_require__(/*! ./charts/self-motivation/self-motivation.component */ "./src/app/charts/self-motivation/self-motivation.component.ts");
-/* harmony import */ var _charts_learning_behavior_patterns_learning_behavior_patterns_component__WEBPACK_IMPORTED_MODULE_53__ = __webpack_require__(/*! ./charts/learning-behavior-patterns/learning-behavior-patterns.component */ "./src/app/charts/learning-behavior-patterns/learning-behavior-patterns.component.ts");
-/* harmony import */ var _charts_passing_rate_prediction_passing_rate_prediction_component__WEBPACK_IMPORTED_MODULE_54__ = __webpack_require__(/*! ./charts/passing-rate-prediction/passing-rate-prediction.component */ "./src/app/charts/passing-rate-prediction/passing-rate-prediction.component.ts");
-/* harmony import */ var _charts_feedback_feedback_component__WEBPACK_IMPORTED_MODULE_55__ = __webpack_require__(/*! ./charts/feedback/feedback.component */ "./src/app/charts/feedback/feedback.component.ts");
-/* harmony import */ var _charts_course_assessment_course_assessment_component__WEBPACK_IMPORTED_MODULE_56__ = __webpack_require__(/*! ./charts/course-assessment/course-assessment.component */ "./src/app/charts/course-assessment/course-assessment.component.ts");
-/* harmony import */ var _charts_affective_state_affective_state_component__WEBPACK_IMPORTED_MODULE_57__ = __webpack_require__(/*! ./charts/affective-state/affective-state.component */ "./src/app/charts/affective-state/affective-state.component.ts");
-/* harmony import */ var _charts_course_difficulty_course_difficulty_component__WEBPACK_IMPORTED_MODULE_58__ = __webpack_require__(/*! ./charts/course-difficulty/course-difficulty.component */ "./src/app/charts/course-difficulty/course-difficulty.component.ts");
-/* harmony import */ var _charts_curriculum_usage_curriculum_usage_component__WEBPACK_IMPORTED_MODULE_59__ = __webpack_require__(/*! ./charts/curriculum-usage/curriculum-usage.component */ "./src/app/charts/curriculum-usage/curriculum-usage.component.ts");
-/* harmony import */ var _charts_presentation_skills_presentation_skills_component__WEBPACK_IMPORTED_MODULE_60__ = __webpack_require__(/*! ./charts/presentation-skills/presentation-skills.component */ "./src/app/charts/presentation-skills/presentation-skills.component.ts");
-/* harmony import */ var _component_admin_admin_component__WEBPACK_IMPORTED_MODULE_61__ = __webpack_require__(/*! ./component/admin/admin.component */ "./src/app/component/admin/admin.component.ts");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
+/* harmony import */ var angular_font_awesome__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! angular-font-awesome */ "./node_modules/angular-font-awesome/dist/angular-font-awesome.js");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm2015/material.js");
+/* harmony import */ var ng_multiselect_dropdown__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ng-multiselect-dropdown */ "./node_modules/ng-multiselect-dropdown/fesm2015/ng-multiselect-dropdown.js");
+/* harmony import */ var highcharts_angular__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! highcharts-angular */ "./node_modules/highcharts-angular/fesm2015/highcharts-angular.js");
+/* harmony import */ var angular2_multiselect_dropdown__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! angular2-multiselect-dropdown */ "./node_modules/angular2-multiselect-dropdown/fesm2015/angular2-multiselect-dropdown.js");
+/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
+/* harmony import */ var _component_add_data_add_data_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./component/add-data/add-data.component */ "./src/app/component/add-data/add-data.component.ts");
+/* harmony import */ var _component_header_header_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./component/header/header.component */ "./src/app/component/header/header.component.ts");
+/* harmony import */ var _component_display_filter_pipe__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./component/display/filter.pipe */ "./src/app/component/display/filter.pipe.ts");
+/* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/fesm2015/animations.js");
+/* harmony import */ var _data_service__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./data.service */ "./src/app/data.service.ts");
+/* harmony import */ var _component_display_display_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./component/display/display.component */ "./src/app/component/display/display.component.ts");
+/* harmony import */ var _component_dropdown_dropdown_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./component/dropdown/dropdown.component */ "./src/app/component/dropdown/dropdown.component.ts");
+/* harmony import */ var _component_reference_referance_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./component/reference/referance.component */ "./src/app/component/reference/referance.component.ts");
+/* harmony import */ var _component_display_select_check_all_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./component/display/select-check-all.component */ "./src/app/component/display/select-check-all.component.ts");
+/* harmony import */ var _auth_guard_service__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./auth-guard.service */ "./src/app/auth-guard.service.ts");
+/* harmony import */ var _component_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./component/dashboard/dashboard.component */ "./src/app/component/dashboard/dashboard.component.ts");
+/* harmony import */ var _chart_manager_chart_manager_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./chart-manager/chart-manager.component */ "./src/app/chart-manager/chart-manager.component.ts");
+/* harmony import */ var _charts_student_interaction_patterns_student_interaction_patterns_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./charts/student-interaction-patterns/student-interaction-patterns.component */ "./src/app/charts/student-interaction-patterns/student-interaction-patterns.component.ts");
+/* harmony import */ var _charts_competency_competency_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./charts/competency/competency.component */ "./src/app/charts/competency/competency.component.ts");
+/* harmony import */ var _chart_helper_service__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./chart-helper.service */ "./src/app/chart-helper.service.ts");
+/* harmony import */ var _charts_reading_analytics_reading_analytics_component__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./charts/reading-analytics/reading-analytics.component */ "./src/app/charts/reading-analytics/reading-analytics.component.ts");
+/* harmony import */ var _charts_video_analytics_video_analytics_component__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./charts/video-analytics/video-analytics.component */ "./src/app/charts/video-analytics/video-analytics.component.ts");
+/* harmony import */ var _charts_learning_progress_learning_progress_component__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./charts/learning-progress/learning-progress.component */ "./src/app/charts/learning-progress/learning-progress.component.ts");
+/* harmony import */ var _charts_writing_analytics_writing_analytics_component__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./charts/writing-analytics/writing-analytics.component */ "./src/app/charts/writing-analytics/writing-analytics.component.ts");
+/* harmony import */ var _charts_discussion_quality_discussion_quality_component__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./charts/discussion-quality/discussion-quality.component */ "./src/app/charts/discussion-quality/discussion-quality.component.ts");
+/* harmony import */ var _charts_clickstream_analysis_clickstream_analysis_component__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./charts/clickstream-analysis/clickstream-analysis.component */ "./src/app/charts/clickstream-analysis/clickstream-analysis.component.ts");
+/* harmony import */ var _charts_video_engagements_video_engagements_component__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./charts/video-engagements/video-engagements.component */ "./src/app/charts/video-engagements/video-engagements.component.ts");
+/* harmony import */ var _charts_initiative_initiative_component__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./charts/initiative/initiative.component */ "./src/app/charts/initiative/initiative.component.ts");
+/* harmony import */ var _charts_social_analysis_social_analysis_component__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ./charts/social-analysis/social-analysis.component */ "./src/app/charts/social-analysis/social-analysis.component.ts");
+/* harmony import */ var _charts_droppingout_droppingout_component__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! ./charts/droppingout/droppingout.component */ "./src/app/charts/droppingout/droppingout.component.ts");
+/* harmony import */ var _charts_time_distribution_time_distribution_component__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! ./charts/time-distribution/time-distribution.component */ "./src/app/charts/time-distribution/time-distribution.component.ts");
+/* harmony import */ var _charts_time_planning_time_planning_component__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(/*! ./charts/time-planning/time-planning.component */ "./src/app/charts/time-planning/time-planning.component.ts");
+/* harmony import */ var _charts_student_comparison_student_comparison_component__WEBPACK_IMPORTED_MODULE_39__ = __webpack_require__(/*! ./charts/student-comparison/student-comparison.component */ "./src/app/charts/student-comparison/student-comparison.component.ts");
+/* harmony import */ var _charts_engagement_performance_engagement_performance_component__WEBPACK_IMPORTED_MODULE_40__ = __webpack_require__(/*! ./charts/engagement-performance/engagement-performance.component */ "./src/app/charts/engagement-performance/engagement-performance.component.ts");
+/* harmony import */ var _charts_online_change_detection_online_change_detection_component__WEBPACK_IMPORTED_MODULE_41__ = __webpack_require__(/*! ./charts/online-change-detection/online-change-detection.component */ "./src/app/charts/online-change-detection/online-change-detection.component.ts");
+/* harmony import */ var _charts_gamification_gamification_component__WEBPACK_IMPORTED_MODULE_42__ = __webpack_require__(/*! ./charts/gamification/gamification.component */ "./src/app/charts/gamification/gamification.component.ts");
+/* harmony import */ var _charts_predict_coursecompletion_predict_coursecompletion_component__WEBPACK_IMPORTED_MODULE_43__ = __webpack_require__(/*! ./charts/predict-coursecompletion/predict-coursecompletion.component */ "./src/app/charts/predict-coursecompletion/predict-coursecompletion.component.ts");
+/* harmony import */ var _charts_procrastination_procrastination_component__WEBPACK_IMPORTED_MODULE_44__ = __webpack_require__(/*! ./charts/procrastination/procrastination.component */ "./src/app/charts/procrastination/procrastination.component.ts");
+/* harmony import */ var _charts_group_participation_group_participation_component__WEBPACK_IMPORTED_MODULE_45__ = __webpack_require__(/*! ./charts/group-participation/group-participation.component */ "./src/app/charts/group-participation/group-participation.component.ts");
+/* harmony import */ var _charts_clustering_clustering_component__WEBPACK_IMPORTED_MODULE_46__ = __webpack_require__(/*! ./charts/clustering/clustering.component */ "./src/app/charts/clustering/clustering.component.ts");
+/* harmony import */ var _charts_predict_exam_success_predict_exam_success_component__WEBPACK_IMPORTED_MODULE_47__ = __webpack_require__(/*! ./charts/predict-exam-success/predict-exam-success.component */ "./src/app/charts/predict-exam-success/predict-exam-success.component.ts");
+/* harmony import */ var _charts_final_grade_prediction_final_grade_prediction_component__WEBPACK_IMPORTED_MODULE_48__ = __webpack_require__(/*! ./charts/final-grade-prediction/final-grade-prediction.component */ "./src/app/charts/final-grade-prediction/final-grade-prediction.component.ts");
+/* harmony import */ var _charts_learning_behaviour_learning_behaviour_component__WEBPACK_IMPORTED_MODULE_49__ = __webpack_require__(/*! ./charts/learning-behaviour/learning-behaviour.component */ "./src/app/charts/learning-behaviour/learning-behaviour.component.ts");
+/* harmony import */ var _charts_social_network_analysis_social_network_analysis_component__WEBPACK_IMPORTED_MODULE_50__ = __webpack_require__(/*! ./charts/social-network-analysis/social-network-analysis.component */ "./src/app/charts/social-network-analysis/social-network-analysis.component.ts");
+/* harmony import */ var _charts_self_motivation_self_motivation_component__WEBPACK_IMPORTED_MODULE_51__ = __webpack_require__(/*! ./charts/self-motivation/self-motivation.component */ "./src/app/charts/self-motivation/self-motivation.component.ts");
+/* harmony import */ var _charts_learning_behavior_patterns_learning_behavior_patterns_component__WEBPACK_IMPORTED_MODULE_52__ = __webpack_require__(/*! ./charts/learning-behavior-patterns/learning-behavior-patterns.component */ "./src/app/charts/learning-behavior-patterns/learning-behavior-patterns.component.ts");
+/* harmony import */ var _charts_passing_rate_prediction_passing_rate_prediction_component__WEBPACK_IMPORTED_MODULE_53__ = __webpack_require__(/*! ./charts/passing-rate-prediction/passing-rate-prediction.component */ "./src/app/charts/passing-rate-prediction/passing-rate-prediction.component.ts");
+/* harmony import */ var _charts_feedback_feedback_component__WEBPACK_IMPORTED_MODULE_54__ = __webpack_require__(/*! ./charts/feedback/feedback.component */ "./src/app/charts/feedback/feedback.component.ts");
+/* harmony import */ var _charts_course_assessment_course_assessment_component__WEBPACK_IMPORTED_MODULE_55__ = __webpack_require__(/*! ./charts/course-assessment/course-assessment.component */ "./src/app/charts/course-assessment/course-assessment.component.ts");
+/* harmony import */ var _charts_affective_state_affective_state_component__WEBPACK_IMPORTED_MODULE_56__ = __webpack_require__(/*! ./charts/affective-state/affective-state.component */ "./src/app/charts/affective-state/affective-state.component.ts");
+/* harmony import */ var _charts_course_difficulty_course_difficulty_component__WEBPACK_IMPORTED_MODULE_57__ = __webpack_require__(/*! ./charts/course-difficulty/course-difficulty.component */ "./src/app/charts/course-difficulty/course-difficulty.component.ts");
+/* harmony import */ var _charts_curriculum_usage_curriculum_usage_component__WEBPACK_IMPORTED_MODULE_58__ = __webpack_require__(/*! ./charts/curriculum-usage/curriculum-usage.component */ "./src/app/charts/curriculum-usage/curriculum-usage.component.ts");
+/* harmony import */ var _charts_presentation_skills_presentation_skills_component__WEBPACK_IMPORTED_MODULE_59__ = __webpack_require__(/*! ./charts/presentation-skills/presentation-skills.component */ "./src/app/charts/presentation-skills/presentation-skills.component.ts");
+/* harmony import */ var _component_admin_admin_component__WEBPACK_IMPORTED_MODULE_60__ = __webpack_require__(/*! ./component/admin/admin.component */ "./src/app/component/admin/admin.component.ts");
 
 
 
@@ -1080,90 +1079,90 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
-const routes = [
-    { path: "add", component: _component_add_data_add_data_component__WEBPACK_IMPORTED_MODULE_13__["AddDataComponent"], canActivate: [_auth_guard_service__WEBPACK_IMPORTED_MODULE_22__["AuthGuardService"]] },
-    { path: "reference", component: _component_reference_referance_component__WEBPACK_IMPORTED_MODULE_20__["ReferanceComponent"] },
-    { path: "login", component: _component_admin_admin_component__WEBPACK_IMPORTED_MODULE_61__["AdminComponent"] },
-    { path: "dashboard", component: _component_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_23__["DashboardComponent"] },
-    { path: "display/data", component: _component_display_display_component__WEBPACK_IMPORTED_MODULE_18__["DisplayComponent"] },
-    { path: "", redirectTo: "display/data", pathMatch: "full" },
-];
+// const routes: Routes = [
+//   { path: "add", component: AddDataComponent, canActivate: [AuthGuardService]},
+//   { path: "reference", component: ReferanceComponent },
+//   { path: "login", component: AdminComponent },
+//   { path: "dashboard", component: DashboardComponent },
+//   { path: "display/data", component: DisplayComponent },
+//   { path: "", redirectTo: "display/data", pathMatch: "full" },
+//   //{ path: "add/data", redirectTo: "add/data", pathMatch: "full" },
+// ];
 let AppModule = class AppModule {
 };
 AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
         declarations: [
-            _app_component__WEBPACK_IMPORTED_MODULE_12__["AppComponent"],
-            _component_add_data_add_data_component__WEBPACK_IMPORTED_MODULE_13__["AddDataComponent"],
-            _component_header_header_component__WEBPACK_IMPORTED_MODULE_14__["HeaderComponent"],
-            _component_display_display_component__WEBPACK_IMPORTED_MODULE_18__["DisplayComponent"],
-            _component_display_filter_pipe__WEBPACK_IMPORTED_MODULE_15__["SanitizeHtmlPipe"],
-            _component_dropdown_dropdown_component__WEBPACK_IMPORTED_MODULE_19__["DropdownComponent"],
-            _component_display_select_check_all_component__WEBPACK_IMPORTED_MODULE_21__["SelectCheckAllComponent"],
-            _component_reference_referance_component__WEBPACK_IMPORTED_MODULE_20__["ReferanceComponent"],
-            _component_admin_admin_component__WEBPACK_IMPORTED_MODULE_61__["AdminComponent"],
-            _component_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_23__["DashboardComponent"],
-            _chart_manager_chart_manager_component__WEBPACK_IMPORTED_MODULE_24__["ChartManagerComponent"],
-            _charts_student_interaction_patterns_student_interaction_patterns_component__WEBPACK_IMPORTED_MODULE_25__["StudentInteractionPatternsComponent"],
-            _charts_competency_competency_component__WEBPACK_IMPORTED_MODULE_26__["CompetencyComponent"],
-            _charts_reading_analytics_reading_analytics_component__WEBPACK_IMPORTED_MODULE_28__["ReadingAnalyticsComponent"],
-            _charts_video_analytics_video_analytics_component__WEBPACK_IMPORTED_MODULE_29__["VideoAnalyticsComponent"],
-            _charts_learning_progress_learning_progress_component__WEBPACK_IMPORTED_MODULE_30__["LearningProgressComponent"],
-            _charts_writing_analytics_writing_analytics_component__WEBPACK_IMPORTED_MODULE_31__["WritingAnalyticsComponent"],
-            _charts_discussion_quality_discussion_quality_component__WEBPACK_IMPORTED_MODULE_32__["DiscussionQualityComponent"],
-            _charts_clickstream_analysis_clickstream_analysis_component__WEBPACK_IMPORTED_MODULE_33__["ClickstreamAnalysisComponent"],
-            _charts_video_engagements_video_engagements_component__WEBPACK_IMPORTED_MODULE_34__["VideoEngagementsComponent"],
-            _charts_initiative_initiative_component__WEBPACK_IMPORTED_MODULE_35__["InitiativeComponent"],
-            _charts_social_analysis_social_analysis_component__WEBPACK_IMPORTED_MODULE_36__["SocialAnalysisComponent"],
-            _charts_droppingout_droppingout_component__WEBPACK_IMPORTED_MODULE_37__["DroppingoutComponent"],
-            _charts_time_distribution_time_distribution_component__WEBPACK_IMPORTED_MODULE_38__["TimeDistributionComponent"],
-            _charts_time_planning_time_planning_component__WEBPACK_IMPORTED_MODULE_39__["TimePlanningComponent"],
-            _charts_student_comparison_student_comparison_component__WEBPACK_IMPORTED_MODULE_40__["StudentComparisonComponent"],
-            _charts_engagement_performance_engagement_performance_component__WEBPACK_IMPORTED_MODULE_41__["EngagementPerformanceComponent"],
-            _charts_online_change_detection_online_change_detection_component__WEBPACK_IMPORTED_MODULE_42__["OnlineChangeDetectionComponent"],
-            _charts_gamification_gamification_component__WEBPACK_IMPORTED_MODULE_43__["GamificationComponent"],
-            _charts_predict_coursecompletion_predict_coursecompletion_component__WEBPACK_IMPORTED_MODULE_44__["PredictCoursecompletionComponent"],
-            _charts_procrastination_procrastination_component__WEBPACK_IMPORTED_MODULE_45__["ProcrastinationComponent"],
-            _charts_group_participation_group_participation_component__WEBPACK_IMPORTED_MODULE_46__["GroupParticipationComponent"],
-            _charts_clustering_clustering_component__WEBPACK_IMPORTED_MODULE_47__["ClusteringComponent"],
-            _charts_predict_exam_success_predict_exam_success_component__WEBPACK_IMPORTED_MODULE_48__["PredictExamSuccessComponent"],
-            _charts_final_grade_prediction_final_grade_prediction_component__WEBPACK_IMPORTED_MODULE_49__["FinalGradePredictionComponent"],
-            _charts_learning_behaviour_learning_behaviour_component__WEBPACK_IMPORTED_MODULE_50__["LearningBehaviourComponent"],
-            _charts_social_network_analysis_social_network_analysis_component__WEBPACK_IMPORTED_MODULE_51__["SocialNetworkAnalysisComponent"],
-            _charts_self_motivation_self_motivation_component__WEBPACK_IMPORTED_MODULE_52__["SelfMotivationComponent"],
-            _charts_learning_behavior_patterns_learning_behavior_patterns_component__WEBPACK_IMPORTED_MODULE_53__["LearningBehaviorPatternsComponent"],
-            _charts_passing_rate_prediction_passing_rate_prediction_component__WEBPACK_IMPORTED_MODULE_54__["PassingRatePredictionComponent"],
-            _charts_feedback_feedback_component__WEBPACK_IMPORTED_MODULE_55__["FeedbackComponent"],
-            _charts_course_assessment_course_assessment_component__WEBPACK_IMPORTED_MODULE_56__["CourseAssessmentComponent"],
-            _charts_affective_state_affective_state_component__WEBPACK_IMPORTED_MODULE_57__["AffectiveStateComponent"],
-            _charts_course_difficulty_course_difficulty_component__WEBPACK_IMPORTED_MODULE_58__["CourseDifficultyComponent"],
-            _charts_curriculum_usage_curriculum_usage_component__WEBPACK_IMPORTED_MODULE_59__["CurriculumUsageComponent"],
-            _charts_presentation_skills_presentation_skills_component__WEBPACK_IMPORTED_MODULE_60__["PresentationSkillsComponent"],
+            _app_component__WEBPACK_IMPORTED_MODULE_11__["AppComponent"],
+            _component_add_data_add_data_component__WEBPACK_IMPORTED_MODULE_12__["AddDataComponent"],
+            _component_header_header_component__WEBPACK_IMPORTED_MODULE_13__["HeaderComponent"],
+            _component_display_display_component__WEBPACK_IMPORTED_MODULE_17__["DisplayComponent"],
+            _component_display_filter_pipe__WEBPACK_IMPORTED_MODULE_14__["SanitizeHtmlPipe"],
+            _component_dropdown_dropdown_component__WEBPACK_IMPORTED_MODULE_18__["DropdownComponent"],
+            _component_display_select_check_all_component__WEBPACK_IMPORTED_MODULE_20__["SelectCheckAllComponent"],
+            _component_reference_referance_component__WEBPACK_IMPORTED_MODULE_19__["ReferanceComponent"],
+            _component_admin_admin_component__WEBPACK_IMPORTED_MODULE_60__["AdminComponent"],
+            _component_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_22__["DashboardComponent"],
+            _chart_manager_chart_manager_component__WEBPACK_IMPORTED_MODULE_23__["ChartManagerComponent"],
+            _charts_student_interaction_patterns_student_interaction_patterns_component__WEBPACK_IMPORTED_MODULE_24__["StudentInteractionPatternsComponent"],
+            _charts_competency_competency_component__WEBPACK_IMPORTED_MODULE_25__["CompetencyComponent"],
+            _charts_reading_analytics_reading_analytics_component__WEBPACK_IMPORTED_MODULE_27__["ReadingAnalyticsComponent"],
+            _charts_video_analytics_video_analytics_component__WEBPACK_IMPORTED_MODULE_28__["VideoAnalyticsComponent"],
+            _charts_learning_progress_learning_progress_component__WEBPACK_IMPORTED_MODULE_29__["LearningProgressComponent"],
+            _charts_writing_analytics_writing_analytics_component__WEBPACK_IMPORTED_MODULE_30__["WritingAnalyticsComponent"],
+            _charts_discussion_quality_discussion_quality_component__WEBPACK_IMPORTED_MODULE_31__["DiscussionQualityComponent"],
+            _charts_clickstream_analysis_clickstream_analysis_component__WEBPACK_IMPORTED_MODULE_32__["ClickstreamAnalysisComponent"],
+            _charts_video_engagements_video_engagements_component__WEBPACK_IMPORTED_MODULE_33__["VideoEngagementsComponent"],
+            _charts_initiative_initiative_component__WEBPACK_IMPORTED_MODULE_34__["InitiativeComponent"],
+            _charts_social_analysis_social_analysis_component__WEBPACK_IMPORTED_MODULE_35__["SocialAnalysisComponent"],
+            _charts_droppingout_droppingout_component__WEBPACK_IMPORTED_MODULE_36__["DroppingoutComponent"],
+            _charts_time_distribution_time_distribution_component__WEBPACK_IMPORTED_MODULE_37__["TimeDistributionComponent"],
+            _charts_time_planning_time_planning_component__WEBPACK_IMPORTED_MODULE_38__["TimePlanningComponent"],
+            _charts_student_comparison_student_comparison_component__WEBPACK_IMPORTED_MODULE_39__["StudentComparisonComponent"],
+            _charts_engagement_performance_engagement_performance_component__WEBPACK_IMPORTED_MODULE_40__["EngagementPerformanceComponent"],
+            _charts_online_change_detection_online_change_detection_component__WEBPACK_IMPORTED_MODULE_41__["OnlineChangeDetectionComponent"],
+            _charts_gamification_gamification_component__WEBPACK_IMPORTED_MODULE_42__["GamificationComponent"],
+            _charts_predict_coursecompletion_predict_coursecompletion_component__WEBPACK_IMPORTED_MODULE_43__["PredictCoursecompletionComponent"],
+            _charts_procrastination_procrastination_component__WEBPACK_IMPORTED_MODULE_44__["ProcrastinationComponent"],
+            _charts_group_participation_group_participation_component__WEBPACK_IMPORTED_MODULE_45__["GroupParticipationComponent"],
+            _charts_clustering_clustering_component__WEBPACK_IMPORTED_MODULE_46__["ClusteringComponent"],
+            _charts_predict_exam_success_predict_exam_success_component__WEBPACK_IMPORTED_MODULE_47__["PredictExamSuccessComponent"],
+            _charts_final_grade_prediction_final_grade_prediction_component__WEBPACK_IMPORTED_MODULE_48__["FinalGradePredictionComponent"],
+            _charts_learning_behaviour_learning_behaviour_component__WEBPACK_IMPORTED_MODULE_49__["LearningBehaviourComponent"],
+            _charts_social_network_analysis_social_network_analysis_component__WEBPACK_IMPORTED_MODULE_50__["SocialNetworkAnalysisComponent"],
+            _charts_self_motivation_self_motivation_component__WEBPACK_IMPORTED_MODULE_51__["SelfMotivationComponent"],
+            _charts_learning_behavior_patterns_learning_behavior_patterns_component__WEBPACK_IMPORTED_MODULE_52__["LearningBehaviorPatternsComponent"],
+            _charts_passing_rate_prediction_passing_rate_prediction_component__WEBPACK_IMPORTED_MODULE_53__["PassingRatePredictionComponent"],
+            _charts_feedback_feedback_component__WEBPACK_IMPORTED_MODULE_54__["FeedbackComponent"],
+            _charts_course_assessment_course_assessment_component__WEBPACK_IMPORTED_MODULE_55__["CourseAssessmentComponent"],
+            _charts_affective_state_affective_state_component__WEBPACK_IMPORTED_MODULE_56__["AffectiveStateComponent"],
+            _charts_course_difficulty_course_difficulty_component__WEBPACK_IMPORTED_MODULE_57__["CourseDifficultyComponent"],
+            _charts_curriculum_usage_curriculum_usage_component__WEBPACK_IMPORTED_MODULE_58__["CurriculumUsageComponent"],
+            _charts_presentation_skills_presentation_skills_component__WEBPACK_IMPORTED_MODULE_59__["PresentationSkillsComponent"],
         ],
         imports: [
             _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
-            _app_routing_module__WEBPACK_IMPORTED_MODULE_11__["AppRoutingModule"],
-            _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormsModule"],
-            _angular_forms__WEBPACK_IMPORTED_MODULE_4__["ReactiveFormsModule"],
-            _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouterModule"].forRoot(routes),
-            _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_16__["BrowserAnimationsModule"],
-            _angular_material__WEBPACK_IMPORTED_MODULE_7__["MatInputModule"],
-            _angular_material__WEBPACK_IMPORTED_MODULE_7__["MatCardModule"],
-            _angular_material__WEBPACK_IMPORTED_MODULE_7__["MatButtonModule"],
-            _angular_material__WEBPACK_IMPORTED_MODULE_7__["MatToolbarModule"],
-            _angular_common_http__WEBPACK_IMPORTED_MODULE_5__["HttpClientModule"],
-            _angular_material__WEBPACK_IMPORTED_MODULE_7__["MatDialogModule"],
-            _angular_material__WEBPACK_IMPORTED_MODULE_7__["MatSnackBarModule"],
-            ng_multiselect_dropdown__WEBPACK_IMPORTED_MODULE_8__["NgMultiSelectDropDownModule"],
-            _angular_material__WEBPACK_IMPORTED_MODULE_7__["MatSelectModule"],
-            angular2_multiselect_dropdown__WEBPACK_IMPORTED_MODULE_10__["AngularMultiSelectModule"],
-            _angular_material__WEBPACK_IMPORTED_MODULE_7__["MatCheckboxModule"],
-            angular_font_awesome__WEBPACK_IMPORTED_MODULE_6__["AngularFontAwesomeModule"],
-            highcharts_angular__WEBPACK_IMPORTED_MODULE_9__["HighchartsChartModule"],
+            _app_routing_module__WEBPACK_IMPORTED_MODULE_10__["AppRoutingModule"],
+            _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"],
+            _angular_forms__WEBPACK_IMPORTED_MODULE_3__["ReactiveFormsModule"],
+            //RouterModule.forRoot(routes),
+            _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_15__["BrowserAnimationsModule"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatInputModule"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatCardModule"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatButtonModule"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatToolbarModule"],
+            _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClientModule"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatDialogModule"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatSnackBarModule"],
+            ng_multiselect_dropdown__WEBPACK_IMPORTED_MODULE_7__["NgMultiSelectDropDownModule"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatSelectModule"],
+            angular2_multiselect_dropdown__WEBPACK_IMPORTED_MODULE_9__["AngularMultiSelectModule"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatCheckboxModule"],
+            angular_font_awesome__WEBPACK_IMPORTED_MODULE_5__["AngularFontAwesomeModule"],
+            highcharts_angular__WEBPACK_IMPORTED_MODULE_8__["HighchartsChartModule"],
         ],
-        providers: [_data_service__WEBPACK_IMPORTED_MODULE_17__["DataService"], _auth_guard_service__WEBPACK_IMPORTED_MODULE_22__["AuthGuardService"], _chart_helper_service__WEBPACK_IMPORTED_MODULE_27__["ChartHelperService"]],
-        bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_12__["AppComponent"]],
+        providers: [_data_service__WEBPACK_IMPORTED_MODULE_16__["DataService"], _auth_guard_service__WEBPACK_IMPORTED_MODULE_21__["AuthGuardService"], _chart_helper_service__WEBPACK_IMPORTED_MODULE_26__["ChartHelperService"]],
+        bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_11__["AppComponent"]],
     })
 ], AppModule);
 
