@@ -1188,69 +1188,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
     /*! @angular/router */
     "./node_modules/@angular/router/fesm2015/router.js");
-    /* harmony import */
-
-
-    var _component_display_display_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-    /*! ./component/display/display.component */
-    "./src/app/component/display/display.component.ts");
-    /* harmony import */
-
-
-    var _component_admin_admin_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
-    /*! ./component/admin/admin.component */
-    "./src/app/component/admin/admin.component.ts");
-    /* harmony import */
-
-
-    var _component_add_data_add_data_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
-    /*! ./component/add-data/add-data.component */
-    "./src/app/component/add-data/add-data.component.ts");
-    /* harmony import */
-
-
-    var _auth_guard_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
-    /*! ./auth-guard.service */
-    "./src/app/auth-guard.service.ts");
-    /* harmony import */
-
-
-    var _component_reference_referance_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
-    /*! ./component/reference/referance.component */
-    "./src/app/component/reference/referance.component.ts");
-    /* harmony import */
-
-
-    var _component_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
-    /*! ./component/dashboard/dashboard.component */
-    "./src/app/component/dashboard/dashboard.component.ts");
 
     var routes = [//{ path: '/display/data/s', redirectTo: '/', pathMatch: 'full' },
-    //{ path: 'display/data', component: DisplayComponent },
-    //{ path: '', component: DisplayComponent },
-    //{ path: 'admin', component: AdminComponent },
-    // { path: 'add/data', component: AddDataComponent, canActivate: [AuthGuardService] },
-    {
-      path: "add",
-      component: _component_add_data_add_data_component__WEBPACK_IMPORTED_MODULE_5__["AddDataComponent"],
-      canActivate: [_auth_guard_service__WEBPACK_IMPORTED_MODULE_6__["AuthGuardService"]]
-    }, {
-      path: "reference",
-      component: _component_reference_referance_component__WEBPACK_IMPORTED_MODULE_7__["ReferanceComponent"]
-    }, {
-      path: "login",
-      component: _component_admin_admin_component__WEBPACK_IMPORTED_MODULE_4__["AdminComponent"]
-    }, {
-      path: "dashboard",
-      component: _component_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_8__["DashboardComponent"]
-    }, {
-      path: "",
-      component: _component_display_display_component__WEBPACK_IMPORTED_MODULE_3__["DisplayComponent"]
-    }, {
-      path: "",
-      redirectTo: "display/data",
-      pathMatch: "full"
-    }];
+      //{ path: 'display/data', component: DisplayComponent },
+      //{ path: '', component: DisplayComponent },
+      //{ path: 'admin', component: AdminComponent },
+      // { path: 'add/data', component: AddDataComponent, canActivate: [AuthGuardService] },
+      //{ path: 'display/data', redirectTo: 'https://latool.github.io/', pathMatch: 'full' },
+      //{ path: '**', redirectTo: '/home', pathMatch: 'full' }
+    ];
 
     var AppRoutingModule = function AppRoutingModule() {
       _classCallCheck(this, AppRoutingModule);
