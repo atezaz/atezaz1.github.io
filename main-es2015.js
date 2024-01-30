@@ -9278,14 +9278,14 @@ __webpack_require__.r(__webpack_exports__);
 
 
 let DataService = class DataService {
-    //uri = 'http://localhost:49160/openlair';
-    //uri = 'http://localhost:3001/openlair';  //local
+    // uri = 'http://localhost:3001/openlair';  //local
     //68.65.123.130    OLD
     //198.187.29.73
     constructor(http) {
         this.http = http;
         //uri = 'https://programmingzen.org/openlair';
-        this.uri = 'https://backend.openlair.edutec.science/openlair'; //live
+        //uri = 'https://backend.openlair.edutec.science/openlair'; //live
+        this.uri = 'http://localhost:49160/openlair'; //local docker
         //this.currentUserSubject = new BehaviorSubject<User>(JSON.parse(localStorage.getItem('currentUser')));
         //this.currentUser = this.currentUserSubject.asObservable();
     }

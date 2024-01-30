@@ -9706,15 +9706,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
     var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__( /*! rxjs/operators */"./node_modules/rxjs/_esm2015/operators/index.js");
     var DataService = /*#__PURE__*/function () {
-      //uri = 'http://localhost:49160/openlair';
-      //uri = 'http://localhost:3001/openlair';  //local
+      // uri = 'http://localhost:3001/openlair';  //local
       //68.65.123.130    OLD
       //198.187.29.73
       function DataService(http) {
         _classCallCheck(this, DataService);
         this.http = http;
         //uri = 'https://programmingzen.org/openlair';
-        this.uri = 'https://backend.openlair.edutec.science/openlair'; //live
+        //uri = 'https://backend.openlair.edutec.science/openlair'; //live
+        this.uri = 'http://localhost:49160/openlair'; //local docker
         //this.currentUserSubject = new BehaviorSubject<User>(JSON.parse(localStorage.getItem('currentUser')));
         //this.currentUser = this.currentUserSubject.asObservable();
       }
